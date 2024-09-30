@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from "@/assets/SafeTech-Logo.svg";
 import styles from "@/styles/navbar.module.css";
-import { DefaultNavbarItem } from "../ui/types";
+import { DefaultNavbarItem } from "./types";
 import * as React from "react";
 import Link from "next/link";
 import {
@@ -22,7 +22,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import { MobileNav } from "../ui/mobile-navbar";
+import { MobileNav } from "./mobile-navbar";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
 

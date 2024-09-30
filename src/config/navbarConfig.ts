@@ -1,4 +1,4 @@
-import { DefaultNavbarItem } from "./types";
+import { DefaultNavbarItem } from "../components/layout/types";
 
 export const navbarConfig: DefaultNavbarItem[] = [
     {

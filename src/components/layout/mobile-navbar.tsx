@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 
 import type { DefaultNavbarItem } from "./types";
-import { navbarConfig } from "./navbarConfig";
+import { navbarConfig } from "../../config/navbarConfig";
 import { cn } from "@/lib/utils";
 import { useLockBody } from "@/hooks/use-lock-body";
 import { SheetClose } from "@/components/ui/sheet";
