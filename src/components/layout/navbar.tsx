@@ -1,129 +1,128 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-    NavigationMenuViewport,
+"use client";
 
-} from "@/components/ui/navigation-menu"
-
-
-
-
+import Image from "next/image";
+import logo from "@/assets/SafeTech-Logo.svg";
 import styles from "@/styles/navbar.module.css";
+import { DefaultNavbarItem } from "../ui/types";
+import * as React from "react";
 import Link from "next/link";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    DropdownMenuSub,
+    DropdownMenuSubTrigger,
+    DropdownMenuSubContent,
+} from "@/components/ui/dropdown-menu";
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet";
+import { MobileNav } from "../ui/mobile-navbar";
+import { Menu } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
-import { Button } from "../ui/button";
-import { ProductsDropdown } from "./ProductDropdown";
-import ListItem from "../ui/list-item";
 
-const products: { title: string; href: string; list?: Array<string> }[] = [
-    {
-        title: "Load Moment Indicator",
-        href: "/products/lmi",
-        list: ["Side Boom", "Fork Lift"]
-    },
-    {
-        title: "LMI",
-        href: "/products/lmi",
-        list: ["Side Boom", "Fork Lift"]
-    },
-    {
-        title: "LMI",
-        href: "/products/lmi",
-    },
-    {
-        title: "LMI",
-        href: "/products/lmi",
-    },
-];
+type DefaultNavbarProps = {
+    mainNav: DefaultNavbarItem[];
+};
 
-function Navbar() {
+export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
     return (
         <nav className={styles.container}>
+            <div className={styles.wrapper}>
+                <Image src={logo} alt="BI" width={100} height={20} />
 
-            <NavigationMenu>
-                <NavigationMenuList>
-                    <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Home
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <Link href="/about-us" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                About Us
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
+                <section className="flex md:justify-evenly md:items-center py-2 px-3 rounded">
+                    <div className="lg:hidden mr-2 flex items-center">
+                        <Sheet>
+                            <SheetTrigger>
+                                <Menu />
+                            </SheetTrigger>
+                            <SheetContent className="flex-col" side="left">
+                                <SheetHeader>
+                                    <SheetTitle>
+                                        <Link href="/" className="flex justify-center items-center">
+                                            <Image src={logo} alt="BI" width={100} height={20} />
+                                        </Link>
+                                    </SheetTitle>
+                                </SheetHeader>
+                                <MobileNav />
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                    <Link
+                        href="/"
+                        className="md:hidden ml-3 md:ml-0 flex justify-center items-center"
+                    >
+                        <Image src={logo} alt="NextDemo" width={20} height={20} />
+                    </Link>
+                    <div className="hidden md:flex w-full justify-evenly items-center">
+                        {mainNav.map((item, idx) => (
+                            <React.Fragment key={idx}>
+                                <NavDropDownMenu item={item} />
+                                {idx < mainNav.length - 1 && <div className="w-6" />}
+                            </React.Fragment>
+                        ))}
+                    </div>
+                </section>
 
-
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger>LMI</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul>
-                                {products.map((product, index) => (
-                                    <ListItem
-                                        key={index}
-                                        title={product.title}
-                                        href={product.href}
-                                    >
-                                        {product.list?.map((item, index) => (
-                                            <p key={index}>{item}</p>
-                                        ))}
-                                    </ListItem>
-                                ))
-                                }
-                            </ul>
-                        </NavigationMenuContent>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        <Link href="/contact" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Contact Us
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
-
-
-            <ModeToggle />
-
-
+                <section className={styles.rightSide}>
+                    <ModeToggle />
+                </section>
+            </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+const NavDropDownMenu = ({ item }: { item: DefaultNavbarItem }) => {
+    const [open, setOpen] = React.useState(false);
+    return (
+        <DropdownMenu open={open} onOpenChange={setOpen}>
+            <DropdownMenuTrigger>
+                <Link href={item.href} onMouseEnter={() => setOpen(!open)}>
+                    {item.title}
+                </Link>
+            </DropdownMenuTrigger>
+            <div onMouseLeave={() => setOpen(!open)}>
+                {item.children.length > 0 && (
+                    <DropdownMenuContent>
+                        {item.children.map((item, idx) =>
+                            item.children.length > 0 ? (
+                                <NavSubMenu key={idx} item={item}></NavSubMenu>
+                            ) : (
+                                <DropdownMenuItem key={idx}>
+                                    <Link href={item.href}>{item.title}</Link>
+                                </DropdownMenuItem>
+                            )
+                        )}
+                    </DropdownMenuContent>
+                )}
+            </div>
+        </DropdownMenu>
+    );
+};
 
-
-
-
-
-{/* <NavigationMenuItem>
-<NavigationMenuTrigger>Products</NavigationMenuTrigger>
-<NavigationMenuContent>
-    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-        {products.map((product) => (
-            <ListItem
-                key={product.title}
-                title={product.title}
-                href={product.href}
-            >
-                {product.list?.map((item, index) => (
-                    <p key={index}>{item}</p>
-                ))}
-            </ListItem>
-        ))}
-    </ul>
-</NavigationMenuContent>
-</NavigationMenuItem> */}
+const NavSubMenu = ({ item }: { item: DefaultNavbarItem }) => {
+    return (
+        <DropdownMenuSub>
+            <DropdownMenuSubTrigger>
+                <Link href={item.href}>{item.title}</Link>
+            </DropdownMenuSubTrigger>
+            <DropdownMenuSubContent>
+                {item.children.map((item, idx) =>
+                    item.children.length > 0 ? (
+                        <NavSubMenu key={idx} item={item} />
+                    ) : (
+                        <DropdownMenuItem key={idx}>
+                            <Link href={item.href}>{item.title}</Link>
+                        </DropdownMenuItem>
+                    )
+                )}
+            </DropdownMenuSubContent>
+        </DropdownMenuSub>
+    );
+};
