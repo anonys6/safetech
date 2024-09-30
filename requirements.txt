@@ -1,0 +1,18 @@
+ecommerce - ask for price
+shop page
+more animation
+wordpress - 
+domain - 
+
+
+
+database (mongo) - product details
+cloudinary - product image
+dynamic page
+next js
+product by product page
+shop page also
+url should be same
+shadcn ui
+more animation but smooth animation
+good and responsive

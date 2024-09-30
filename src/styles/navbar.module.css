@@ -1,0 +1,72 @@
+.container {
+    height: 72px;
+    width: 100%;
+    display: flex;
+    background-color: var(--card);
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    /* gap: 20px; */
+}
+
+
+.navLinks li:hover {
+    color: hsl(var(--chart-1));
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* best breakpoints for css
+    * 320px
+    * 480px
+    * 600px
+    * 768px
+    * 1024px
+    * 1200px
+    * 1440px
+    * 1920px
+
+    320px 480px •768px •1024px •1300px •1920px
+*/
+
+@media screen and (max-width: 1300px) {
+    .container {
+        height: 60px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navLinks {
+        display: none;
+    }
+}
