@@ -57,13 +57,14 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styles from "@/styles/homeCarousel.module.css"
 import Image from 'next/image';
+import { BackgroundLines } from "../ui/background-lines";
 
 export default function HomeCarousel() {
     const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
     return (
         <div className={styles.embla} ref={emblaRef}>
-            <div className={styles.embla__container}>
+            {/* <div className={styles.embla__container}>
                 <div className={styles.embla__slide}>
                     <Image
                         src={pwasImage}
@@ -90,7 +91,10 @@ export default function HomeCarousel() {
                         className={styles.embla__slide__img}
                     />
                 </div>
-            </div>
+            </div> */}
+            <BackgroundLines>
+                .
+            </BackgroundLines>
         </div>
     )
 }
