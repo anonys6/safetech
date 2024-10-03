@@ -50,13 +50,13 @@
 //     )
 // }
 
-import pwasImage from "@/assets/pwas-hero.webp";
+// import pwasImage from "@/assets/pwas-hero.webp";
 
 import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styles from "@/styles/homeCarousel.module.css"
-import Image from 'next/image';
+// import Image from 'next/image';
 import { BackgroundLines } from "../ui/background-lines";
 
 export default function HomeCarousel() {
