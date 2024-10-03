@@ -1,4 +1,3 @@
-
 import AboutProgressBar from '@/components/layout/AboutProgressBar'
 import React from 'react'
 

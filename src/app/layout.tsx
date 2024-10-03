@@ -5,6 +5,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { DefaultNavbar } from "@/components/layout/navbar";
 import { navbarConfig } from "@/config/navbarConfig";
+import Footer from "@/components/layout/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Providers>
           <DefaultNavbar mainNav={navbarConfig} />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

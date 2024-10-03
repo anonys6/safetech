@@ -10,12 +10,14 @@ export default function Home() {
         <>
             <HomeCarousel />
 
+            {/* <div className={styles.bg}> */}
             <AboutProgressBar />
 
             <div className={styles.wrapperFaqEnquiry}>
                 <FAQ />
                 <EnquiryForm />
             </div>
+            {/* </div> */}
         </>
     );
 }

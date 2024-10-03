@@ -24,6 +24,8 @@
     --chart-4: #f99f54;
     --chart-5: #f2a74d;
     --radius: 0.5rem;
+
+    --footer-hr: 1px solid hsl(217.2deg 21.4% 39.47%)
 }
 
 
@@ -52,4 +54,6 @@
     --chart-3: #ffa94d;
     --chart-4: #d28cff;
     --chart-5: #ff66a3;
+
+    --footer-hr: 1px solid hsl(217.2deg 21.4% 39.47%)
 }
