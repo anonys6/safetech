@@ -67,3 +67,10 @@
     padding: 40px;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+}
