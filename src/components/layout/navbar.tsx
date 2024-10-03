@@ -54,12 +54,12 @@ export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
                             </SheetContent>
                         </Sheet>
                     </div>
-                    <Link
+                    {/* <Link
                         href="/"
                         className="md:hidden ml-3 md:ml-0 flex justify-center items-center"
                     >
                         <Image src={logo} alt="NextDemo" width={20} height={20} />
-                    </Link>
+                    </Link> */}
                     <div className="hidden md:flex w-full justify-evenly items-center">
                         {mainNav.map((item, idx) => (
                             <React.Fragment key={idx}>

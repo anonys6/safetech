@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { MdOutlineHomeWork } from "react-icons/md";
 import { Button } from '../ui/button';
 import { Progress } from '../ui/progress';
+// import { Progress } from "@nextui-org/progress";
 import Link from 'next/link';
 
 const progressArray: {
@@ -70,6 +71,7 @@ function AboutProgressBar() {
                   <span>{progress.value}%</span>
                 </div>
                 <Progress value={progress.value} />
+                {/* <Progress label={progress.title} value={progress.value} className="max-w-md" /> */}
               </div>
             ))}
           </div>

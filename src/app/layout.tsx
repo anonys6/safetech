@@ -1,7 +1,8 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Providers } from "./providers";
 import { DefaultNavbar } from "@/components/layout/navbar";
 import { navbarConfig } from "@/config/navbarConfig";
 
@@ -31,16 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Navbar /> */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           <DefaultNavbar mainNav={navbarConfig} />
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
