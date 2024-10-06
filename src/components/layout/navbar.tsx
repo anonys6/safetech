@@ -35,7 +35,9 @@ export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
         <header>
             <nav className={styles.container}>
                 <div className={styles.wrapper}>
-                    <Image src={logo} alt="BI" width={100} height={20} />
+                    <Link href="/">
+                        <Image src={logo} alt="BI" width={100} height={20} />
+                    </Link>
 
                     <section className="flex md:justify-evenly md:items-center py-2 px-3 rounded">
                         <div className="lg:hidden mr-2 flex items-center">
@@ -85,7 +87,7 @@ const NavDropDownMenu = ({ item }: { item: DefaultNavbarItem }) => {
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger>
-                <Link href={item.href} onMouseEnter={() => setOpen(!open)}>
+                <Link href={item.href} onMouseEnter={() => setOpen(!open)} className={styles.navLink}>
                     {item.title}
                 </Link>
             </DropdownMenuTrigger>
@@ -112,7 +114,7 @@ const NavSubMenu = ({ item }: { item: DefaultNavbarItem }) => {
     return (
         <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-                <Link href={item.href}>{item.title}</Link>
+                <Link href={item.href} className={styles.navLink}>{item.title}</Link>
             </DropdownMenuSubTrigger>
             <DropdownMenuSubContent>
                 {item.children.map((item, idx) =>
@@ -120,7 +122,7 @@ const NavSubMenu = ({ item }: { item: DefaultNavbarItem }) => {
                         <NavSubMenu key={idx} item={item} />
                     ) : (
                         <DropdownMenuItem key={idx}>
-                            <Link href={item.href}>{item.title}</Link>
+                            <Link href={item.href} className={styles.navLink} >{item.title}</Link>
                         </DropdownMenuItem>
                     )
                 )}

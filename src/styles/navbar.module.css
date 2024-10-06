@@ -28,6 +28,19 @@
     justify-content: space-between;
 }
 
+.wrapper > a {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    transition: color 0.1s;
+}
+
+.navLink:hover {
+    color: hsl(var(--primary));
+}
+
 @media screen and (max-width: 1200px) {
     .wrapper {
         width: 100%;
