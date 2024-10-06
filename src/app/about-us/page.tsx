@@ -5,7 +5,7 @@ import React from 'react'
 function page() {
     return (
         <>
-            <AboutProgressBar />
+            <AboutProgressBar title={`About`} />
             <Testimonials />
         </>
     )

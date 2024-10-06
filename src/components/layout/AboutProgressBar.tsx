@@ -35,7 +35,9 @@ const progressArray: {
 
   ]
 
-function AboutProgressBar() {
+function AboutProgressBar({ title }: {
+  title: string
+}) {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -52,7 +54,7 @@ function AboutProgressBar() {
         <div className={styles.contentWrapper}>
           <div className={styles.aboutHeading}>
             <MdOutlineHomeWork size={24} />
-            <h3>About</h3>
+            <h3>{title}</h3>
           </div>
           <h2>Welcome to <span className='text-orange-600'>Safe Tech Solutions</span></h2>
           <p>

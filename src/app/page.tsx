@@ -11,7 +11,7 @@ export default function Home() {
             <HomeCarousel />
 
             {/* <div className={styles.bg}> */}
-            <AboutProgressBar />
+            <AboutProgressBar title={`About`} />
 
             <div className={styles.wrapperFaqEnquiry}>
                 <FAQ />

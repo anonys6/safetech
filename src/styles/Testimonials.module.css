@@ -97,3 +97,17 @@
     font-weight: 400;
     color: hsl(var(--muted-foreground));
 }
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .leftSide {
+        width: 100%;
+        text-align: center;
+    }
+    
+}

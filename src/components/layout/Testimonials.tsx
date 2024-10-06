@@ -72,7 +72,7 @@ function Testimonials() {
                             {testimonialsArray.map((item, index) => (
                                 <CarouselItem key={index} className={styles.itemBox}>
                                     <TestimonialCard name={item.name} position={item.position} testimonial={item.testimonial} />
-                                    <TestimonialCard name={item.name} position={item.position} testimonial={item.testimonial} />
+                                    {/* <TestimonialCard name={item.name} position={item.position} testimonial={item.testimonial} /> */}
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
