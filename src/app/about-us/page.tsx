@@ -5,8 +5,8 @@ import React from 'react'
 function page() {
     return (
         <>
-            <Testimonials />
             <AboutProgressBar />
+            <Testimonials />
         </>
     )
 }

@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     height: 64px;
+    border-bottom: 1px solid hsl(var(--border));
 
 }
 
