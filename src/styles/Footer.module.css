@@ -1,16 +1,9 @@
-.container:root {
-    --bg-footer: #2168AF;
-}
-
-.container .dark {
-    --bg-footer: #0D3B66;
-}
-
 .container {
     display: flex;
     padding: 50px 162px 0 162px;
     flex-direction: column;
     background-color: var(--bg-footer);
+    color: hsl(0 0% 93.33%);
 }
 
 .wrapper {

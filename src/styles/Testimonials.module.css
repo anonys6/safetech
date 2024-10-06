@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    padding: 70px 0;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid hsl(var(--border));
+    background-image: url(../assets/testimonials-bg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1200px;
+    gap: 60px;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.itemBox {
+    display: flex;
+    gap: 20px;
+}
+
+.heading {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.heading>h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.leftSide {
+    /* flex: 4; */
+    width: 40%;
+}
+
+.leftSide>h2 {
+    font-size: 46px;
+}
+
+.rightSide {
+    /* flex: 5; */
+    width: 60%;
+}
+
+.wrapperTestimonial {
+    display: flex;
+    /* width: 50%; */
+    flex-direction: column;
+    border: 1px solid hsl(var(--border));
+}
+
+.top {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid hsl(var(--border));
+    padding: 10px;
+}
+
+.top>img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.bottom {
+    user-select: none;
+    padding: 10px;
+}
+
+.nameBox>h3 {
+    color: hsl(var(--primary));
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nameBox>p {
+    color: hsl(var(--muted-foreground));
+    font-size: 14px;
+}
+
+.bottom > p {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(var(--muted-foreground));
+}

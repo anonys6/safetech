@@ -32,49 +32,51 @@ type DefaultNavbarProps = {
 
 export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
     return (
-        <nav className={styles.container}>
-            <div className={styles.wrapper}>
-                <Image src={logo} alt="BI" width={100} height={20} />
+        <header>
+            <nav className={styles.container}>
+                <div className={styles.wrapper}>
+                    <Image src={logo} alt="BI" width={100} height={20} />
 
-                <section className="flex md:justify-evenly md:items-center py-2 px-3 rounded">
-                    <div className="lg:hidden mr-2 flex items-center">
-                        <Sheet>
-                            <SheetTrigger>
-                                <Menu />
-                            </SheetTrigger>
-                            <SheetContent className="flex-col" side="left">
-                                <SheetHeader>
-                                    <SheetTitle>
-                                        <Link href="/" className="flex justify-center items-center">
-                                            <Image src={logo} alt="BI" width={100} height={20} />
-                                        </Link>
-                                    </SheetTitle>
-                                </SheetHeader>
-                                <MobileNav />
-                            </SheetContent>
-                        </Sheet>
-                    </div>
-                    {/* <Link
+                    <section className="flex md:justify-evenly md:items-center py-2 px-3 rounded">
+                        <div className="lg:hidden mr-2 flex items-center">
+                            <Sheet>
+                                <SheetTrigger>
+                                    <Menu />
+                                </SheetTrigger>
+                                <SheetContent className="flex-col" side="left">
+                                    <SheetHeader>
+                                        <SheetTitle>
+                                            <Link href="/" className="flex justify-center items-center">
+                                                <Image src={logo} alt="BI" width={100} height={20} />
+                                            </Link>
+                                        </SheetTitle>
+                                    </SheetHeader>
+                                    <MobileNav />
+                                </SheetContent>
+                            </Sheet>
+                        </div>
+                        {/* <Link
                         href="/"
                         className="md:hidden ml-3 md:ml-0 flex justify-center items-center"
                     >
                         <Image src={logo} alt="NextDemo" width={20} height={20} />
                     </Link> */}
-                    <div className="hidden md:flex w-full justify-evenly items-center">
-                        {mainNav.map((item, idx) => (
-                            <React.Fragment key={idx}>
-                                <NavDropDownMenu item={item} />
-                                {idx < mainNav.length - 1 && <div className="w-6" />}
-                            </React.Fragment>
-                        ))}
-                    </div>
-                </section>
+                        <div className="hidden md:flex w-full justify-evenly items-center">
+                            {mainNav.map((item, idx) => (
+                                <React.Fragment key={idx}>
+                                    <NavDropDownMenu item={item} />
+                                    {idx < mainNav.length - 1 && <div className="w-6" />}
+                                </React.Fragment>
+                            ))}
+                        </div>
+                    </section>
 
-                <section className={styles.rightSide}>
-                    <ModeToggle />
-                </section>
-            </div>
-        </nav>
+                    <section className={styles.rightSide}>
+                        <ModeToggle />
+                    </section>
+                </div>
+            </nav>
+        </header>
     );
 };
 

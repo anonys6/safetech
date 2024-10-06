@@ -7,7 +7,7 @@ import styles from "@/styles/home.module.css";
 
 export default function Home() {
     return (
-        <>
+        <main>
             <HomeCarousel />
 
             {/* <div className={styles.bg}> */}
@@ -18,6 +18,6 @@ export default function Home() {
                 <EnquiryForm />
             </div>
             {/* </div> */}
-        </>
+        </main>
     );
 }
