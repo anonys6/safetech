@@ -16,8 +16,17 @@ import {
 } from "@/components/ui/drawer"
 import EnquiryForm from "./EnquiryForm";
 
-
 export default function GetQuote() {
+    const [isClient, setIsClient] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) {
+        return null;
+    }
+
     return (
         <Drawer direction={window.innerWidth <= 768 ? "bottom" : "left"}>
             <DrawerTrigger asChild>
