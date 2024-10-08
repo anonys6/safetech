@@ -1,6 +1,74 @@
 {
-    "Example": {
-        "welcome": "مرحبا بكم في SafeTech",
-        "about_us": "معلومات عنا"
+    "FAQ": {
+        "heading": "الأسئلة الشائعة",
+        "faq1_title": "1. ما هي المنتجات التي تقدمها Safe Tech؟",
+        "faq1_content": "تقدم Safe Tech مجموعة واسعة من المنتجات، بما في ذلك <span style=\"color: #f60;\"><a style=\"color: #f60;\" href=\"https://safetechco.com/pwas-systems/\">أنظمة التنبيه بالتحذير القريب (PWAS)</a></span>، <span style=\"color: #f60;\"><a style=\"color: #f60;\" href=\"https://safetechco.com/side-boom-lmi/\">مؤشرات الحمل (LMI)</a></span>، أنظمة مراقبة السائق (DMS)، كاميرات الداش الذكية، الخوذات الذكية، أنظمة GPS، وأنظمة إدارة الأسطول.",
+        "faq2_title": "2. ما هو نظام التنبيه بالتحذير القريب (PWAS)؟",
+        "faq2_content": "نظام التنبيه بالتحذير القريب من Safe Tech هو نظام متقدم مصمم لاكتشاف الأشياء والأفراد حول المركبات والمعدات لمنع الحوادث، ويقدم تغطية بزاوية 360 درجة باستخدام أجهزة استشعار وكاميرات مدعومة بالذكاء الاصطناعي.<br><br>هناك ثلاثة أنواع من أنظمة PWAS:<br><br><span style=\"color: #ff6600;\">1: <a style=\"color: #ff6600;\" href=\"https://safetechco.com/pwas-systems/\">أنظمة PWAS بزاوية 360 درجة</a></span><br><span style=\"color: #ff6600;\">2: <a style=\"color: #ff6600;\" href=\"https://safetechco.com/radar-sensor-pwas/\">أنظمة PWAS مع الرادار</a></span><br><span style=\"color: #ff6600;\">3: <a style=\"color: #ff6600;\" href=\"https://safetechco.com/pwas-system-using-multiple-sensor/\">أنظمة PWAS متعددة الاستشعار&nbsp;</a></span>",
+        "faq3_title": "3. ما هو نظام مؤشر الحمل (LMI)؟",
+        "faq3_content": "نظام <strong>مؤشر الحمل (LMI)</strong> يراقب الحمل على <strong>الرافعات</strong> والمعدات الثقيلة لضمان عمليات رفع آمنة من خلال توفير بيانات لحظية حول <strong>وزن الحمل</strong>، زاوية الذراع، والسعة.<br><br><strong><span style=\"color: #ff6600;\"><a style=\"color: #ff6600;\" href=\"https://safetechco.com/side-boom-lmi/\">أنواع أنظمة LMI:</a></span></strong><br><span style=\"color: #333333;\"><strong><a style=\"color: #333333;\" href=\"https://safetechco.com/side-boom-lmi/\"> أ: جهاز أمان لرافعات Side Boom</a></strong></span><br><strong><span style=\"color: #333333;\"><a style=\"color: #333333;\" href=\"https://safetechco.com/boom-truck-lmi/\"> ب: جهاز أمان للرافعات المثبتة</a></span></strong><br><strong><span style=\"color: #333333;\"><a style=\"color: #333333;\" href=\"https://safetechco.com/lmi-articulated/\"> ج: جهاز أمان لرافعات Knuckle Boom</a></span></strong>",
+        "faq4_title": "4. كيف يعمل نظام مراقبة السائق (DMS)؟",
+        "faq4_content": "يستخدم نظام <strong>DMS</strong> من Safe Tech الذكاء الاصطناعي لمراقبة سلوك السائق، كالكشف عن علامات التعب أو الإلهاء أو القيادة الخطرة، ويصدر تنبيهات لضمان <strong>السلامة</strong>.",
+        "faq5_title": "5. ما هي الخوذة الذكية وكيف تعزز السلامة؟",
+        "faq5_content": "تم تصميم <strong>الخوذة الذكية من Safe Tech</strong> بأجهزة استشعار متقدمة لمراقبة بيئة <strong>العامل وحالته</strong>، وتوفير تنبيهات للمواقف الخطرة، مما يعزز <strong>السلامة في مكان العمل</strong>.",
+        "faq6_title": "6. هل منتجات Safe Tech متوافقة مع معايير السلامة؟",
+        "faq6_content": "نعم، <strong>منتجات Safe Tech</strong> تلتزم بمعايير السلامة الخاصة بالصناعة. على سبيل المثال، مؤشرات الحمل <strong>LMI</strong> تتوافق مع معيار السلامة <strong>ASMEB30.14</strong>.",
+        "faq7_title": "7. ما هي الصناعات التي تستفيد من منتجات Safe Tech؟",
+        "faq7_content": "الصناعات مثل <strong>البناء</strong>، <strong>اللوجستيات</strong>، <strong>إدارة الأسطول</strong>، <strong>النفط والغاز</strong>، والتصنيع تستفيد من منتجات Safe Tech للسلامة والمراقبة.",
+        "faq8_title": "8. هل تقدم Safe Tech خدمات التركيب لمنتجاتها؟",
+        "faq8_content": "نعم، تقدم Safe Tech خدمات التركيب لضمان الإعداد الصحيح وتشغيل منتجات مثل <strong>PWAS</strong> و<strong>LMI</strong> و<strong>DMS</strong>.",
+        "faq9_title": "9. هل تقدم Safe Tech خدمات الإصلاح والدعم؟",
+        "faq9_content": "نعم، تقدم Safe Tech خدمات الإصلاح والدعم الفني لضمان استمرار عمل المنتجات وطول عمرها.",
+        "faq10_title": "10. ما هي خيارات التخصيص التي تقدمها Safe Tech؟",
+        "faq10_content": "تقدم Safe Tech مجموعة واسعة من خيارات التخصيص، بما في ذلك:<ul><li><strong>تكوين أجهزة الاستشعار</strong>: تعديل عدد ونوع أجهزة الاستشعار المستخدمة في الأنظمة مثل PWAS لتناسب احتياجات الموقع أو المركبة المحددة.</li><li><strong>التكامل</strong>: تكامل مخصص مع الآلات الموجودة أو أنظمة إدارة الأسطول لتبسيط العمليات.</li><li><strong>إضافات الميزات</strong>: ميزات إضافية مثل مراقبة سرعة الرياح للرافعات أو تتبع الضغط للمركبات المفصلية.</li><li><strong>تخصيص البرمجيات</strong>: تخصيص واجهات المستخدم، إعدادات الإنذارات، وتنسيقات التقارير بناءً على تفضيلات العميل.</li></ul>"
+    },
+    "About": {
+        "title": "حول حلول Safe Tech",
+        "heading": "مرحبا بكم في حلول Safe Tech",
+        "intro": "تتقدم Safe Tech Solutions بالسلامة من خلال أنظمة PWAS المتقدمة وأنظمة LMI وإدارة الأسطول. نركز على التميز واحتياجات العملاء ونقدم أمانًا عالي الجودة، مما يعزز السلامة والكفاءة في أماكن العمل حول العالم.",
+        "discover_more": "اكتشف المزيد",
+        "progress_innovation": "الابتكار",
+        "progress_customer_focus": "تركيز العميل",
+        "progress_quality_excellence": "جودة التميز",
+        "progress_reliability": "الموثوقية",
+        "progress_integrity": "النزاهة"
+    },
+    "EnquiryForm": {
+        "title": "إرسال استفسار",
+        "name_placeholder": "الاسم*",
+        "organization_placeholder": "الشركة/المؤسسة*",
+        "country_placeholder": "البلد*",
+        "email_placeholder": "البريد الإلكتروني*",
+        "phone_placeholder": "الهاتف/واتساب*",
+        "message_placeholder": "الرسالة",
+        "submit_button": "إرسال",
+        "validation": {
+            "username": "يجب أن يكون اسم المستخدم على الأقل من حرفين."
+        }
+    },
+    "Footer": {
+        "description": "تقدم Safe Tech Solutions حلول السلامة مع تقنيات متقدمة، مع إعادة تعريف معايير الصناعة. التزامنا بالتميز والابتكار المرتكز على العملاء يضمن أمانًا لا مثيل له في أماكن العمل في جميع أنحاء العالم.",
+        "privacy_policy": "سياسة الخصوصية",
+        "keep_in_touch": "ابقَ على تواصل",
+        "email_label": "البريد الإلكتروني:",
+        "phone_label": "الهاتف:",
+        "address_label": "العنوان:",
+        "address_details": "مبنى رقم 4185، طريق الأمير نايف 6599،\nالرمز البريدي 35514 مدينة الجبيل،\nالمملكة العربية السعودية",
+        "lmi_title": "مؤشرات الحمل",
+        "pwas_title": "أنظمة التنبيه بالتحذير القريب",
+        "others": {
+            "privacy_policy": "سياسة الخصوصية",
+            "cookie_policy": "سياسة ملفات تعريف الارتباط",
+            "terms_conditions": "الشروط والأحكام",
+            "disclaimer": "إخلاء المسؤولية",
+            "agreement": "اتفاقية"
+        },
+        "copyright": "حقوق الطبع والنشر © 2024 SafeTech، مقدمة من SafeTech"
+    },
+    "GetQuote": {
+        "button_text": "احصل على عرض",
+        "title": "طلب عرض سعر",
+        "description": "حدد هدف نشاطك اليومي.",
+        "cancel_button": "إلغاء"
     }
 }

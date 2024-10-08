@@ -1,6 +1,74 @@
 {
-    "Example": {
-        "welcome": "Welcome to SafeTech",
-        "about_us": "About Us"
+    "FAQ": {
+        "heading": "Frequently Asked Questions (FAQs)",
+        "faq1_title": "1. What products does Safe Tech offer?",
+        "faq1_content": "Safe Tech offers a wide range of products, including <span style=\"color: #f60;\"><a style=\"color: #f60;\" href=\"https://safetechco.com/pwas-systems/\">Proximity Warning Alert Systems (PWAS)</a></span>,<span style=\"color: #f60;\"><a style=\"color: #f60;\" href=\"https://safetechco.com/side-boom-lmi/\"> Load Moment Indicators (LMI)</a>,</span> Driver Monitoring Systems (DMS), AI dash cameras, Smart Helmets, GPS systems, and fleet management systems.",
+        "faq2_title": "2. What is the Proximity Warning Alert System (PWAS)?",
+        "faq2_content": "Safe Tech's PWAS is an advanced system designed to detect objects and personnel around vehicles and equipment to prevent accidents, offering 360-degree coverage with AI-powered sensors and cameras.<br><br>There are three types of PWAS systems:<br><br><span style=\"color: #ff6600;\">1: <a style=\"color: #ff6600;\" href=\"https://safetechco.com/pwas-systems/\">AI PWAS SYSTEMS 360 DEGREE</a></span><br><span style=\"color: #ff6600;\">2: <a style=\"color: #ff6600;\" href=\"https://safetechco.com/radar-sensor-pwas/\">AI AND RADAR BASED PWAS SYSTEMS</a></span><br><span style=\"color: #ff6600;\">3:<a style=\"color: #ff6600;\" href=\"https://safetechco.com/pwas-system-using-multiple-sensor/\"> MULTI-SENSOR PWAS SYSTEMS&nbsp;</a></span>",
+        "faq3_title": "3. What is a Load Moment Indicator (LMI) system?",
+        "faq3_content": "An <strong>LMI system</strong> monitors the load on <strong>cranes</strong> and other <strong>heavy machinery</strong> to ensure safe lifting operations by providing real-time data on <strong>load weight</strong>, boom angle, and capacity.<br><br><strong><span style=\"color: #ff6600;\"><a style=\"color: #ff6600;\" href=\"https://safetechco.com/side-boom-lmi/\">Types of LMI SYSTEMS:</a></span></strong><br><span style=\"color: #333333;\"><strong><a style=\"color: #333333;\" href=\"https://safetechco.com/side-boom-lmi/\"> A: Side Boom LMI Crane Safety Device</a></strong></span><br><strong><span style=\"color: #333333;\"><a style=\"color: #333333;\" href=\"https://safetechco.com/boom-truck-lmi/\"> B: Mounted Crane LMI Safety Device</a></span></strong><br><strong><span style=\"color: #333333;\"><a style=\"color: #333333;\" href=\"https://safetechco.com/lmi-articulated/\"> C: Knuckle Boom Crane LMI Safety Device</a></span></strong>",
+        "faq4_title": "4. How does the Driver Monitoring System (DMS) work?",
+        "faq4_content": "Safe Tech's <strong>DMS</strong> uses <strong>AI</strong> to monitor the driver's behavior, <strong>detecting signs of fatigue,</strong> distraction, or risky driving, and issuing alerts to ensure <strong>safety.</strong>",
+        "faq5_title": "5. What is the Smart Helmet, and how does it improve safety?",
+        "faq5_content": "<strong>Safe Tech's Smart Helmet</strong> is designed with advanced sensors to monitor the <strong>worker's environment</strong> and condition, providing alerts for hazardous situations and <strong>enhancing workplace safety.</strong>",
+        "faq6_title": "6. Are Safe Tech products compliant with safety standards?",
+        "faq6_content": "Yes, <strong>Safe Tech products</strong> meet various industry-specific safety standards. For example, the <strong>Load Moment Indicators</strong> are compliant with the <strong>ASMEB30.14 safety standard.</strong>",
+        "faq7_title": "7. What industries benefit from using Safe Tech's products?",
+        "faq7_content": "Industries such as <strong>construction</strong>, <strong>logistics</strong>, <strong>fleet management</strong>, <strong>oil and gas</strong>, and <strong>manufacturing</strong> benefit from Safe Tech's safety and monitoring products.",
+        "faq8_title": "8. Does Safe Tech offer installation services for their products?",
+        "faq8_content": "Yes, Safe Tech provides installation services to ensure correct setup and operation of products like <strong>PWAS</strong>, <strong>LMI</strong>, and <strong>DMS systems.</strong>",
+        "faq9_title": "9. Does Safe Tech provide repair and support services?",
+        "faq9_content": "Yes, Safe Tech offers both repair services and technical support to ensure continuous product functionality and longevity.",
+        "faq10_title": "10. What kind of customization options does Safe Tech offer?",
+        "faq10_content": "Safe Tech offers a wide range of customization options, including:<ul><li><strong>Sensor Configuration</strong>: Adjusting the number and type of sensors used in systems like PWAS to match specific site or vehicle requirements.</li><li><strong>Integration</strong>: Custom integration with existing machinery or fleet management systems to streamline operations.</li><li><strong>Feature Add-ons</strong>: Additional features such as wind speed monitoring for cranes or pressure tracking for articulated vehicles.</li><li><strong>Software Customization</strong>: Tailoring user interfaces, alarm settings, and report formats based on customer preferences.</li></ul>"
+    },
+    "About": {
+        "title": "About Safe Tech Solutions",
+        "heading": "Welcome to Safe Tech Solutions",
+        "intro": "Safe Tech Solutions pioneers safety with advanced PWAS systems, LMI systems, and fleet management. Focused on excellence and client needs, we deliver top-tier security, enhancing safety and efficiency in workplaces worldwide.",
+        "discover_more": "DISCOVER MORE",
+        "progress_innovation": "Innovation",
+        "progress_customer_focus": "Customer Focus",
+        "progress_quality_excellence": "Quality Excellence",
+        "progress_reliability": "Reliability",
+        "progress_integrity": "Integrity"
+    },
+    "EnquiryForm": {
+        "title": "Send Enquiry",
+        "name_placeholder": "Name*",
+        "organization_placeholder": "Company/Organization*",
+        "country_placeholder": "Country*",
+        "email_placeholder": "Email*",
+        "phone_placeholder": "Phone/WhatsApp*",
+        "message_placeholder": "Message",
+        "submit_button": "Submit",
+        "validation": {
+            "username": "Username must be at least 2 characters."
+        }
+    },
+    "Footer": {
+        "description": "Safe Tech Solutions pioneers safety with cutting-edge solutions, redefining industry standards. Our commitment to excellence and client-centric innovation ensures unparalleled security in workplaces worldwide.",
+        "privacy_policy": "Privacy Policy",
+        "keep_in_touch": "Keep in Touch",
+        "email_label": "Email:",
+        "phone_label": "Phone:",
+        "address_label": "Address:",
+        "address_details": "Building No. 4185, Prince Nayef Road 6599,\nPostal code 35514 City Jubail Center,\nKingdom of Saudi Arabia",
+        "lmi_title": "LMI",
+        "pwas_title": "PWAS",
+        "others": {
+            "privacy_policy": "Privacy Policy",
+            "cookie_policy": "Cookie Policy",
+            "terms_conditions": "Terms and Conditions",
+            "disclaimer": "Disclaimer",
+            "agreement": "Agreement"
+        },
+        "copyright": "Copyright © 2024 SafeTech, Powered by SafeTech"
+    },
+    "GetQuote": {
+        "button_text": "GET QUOTE",
+        "title": "Request a Quote",
+        "description": "Set your daily activity goal.",
+        "cancel_button": "Cancel"
     }
 }

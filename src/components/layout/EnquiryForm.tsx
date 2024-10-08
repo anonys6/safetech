@@ -1,29 +1,31 @@
 "use client";
 
-import React from 'react'
-import styles from "@/styles/EnquiryForm.module.css"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-
-import { Button } from "@/components/ui/button"
+import React from 'react';
+import styles from "@/styles/EnquiryForm.module.css";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
     FormField,
     FormItem,
     FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { Textarea } from '../ui/textarea';
-
-const formSchema = z.object({
-    username: z.string().min(2, {
-        message: "Username must be at least 2 characters.",
-    }),
-})
+import { useTranslations } from "next-intl";
 
 function EnquiryForm() {
+    const t = useTranslations("EnquiryForm");
+
+    const formSchema = z.object({
+        username: z.string().min(2, {
+            message: t("validation.username"),
+        }),
+    });
+
     const form = useForm({
         resolver: zodResolver(formSchema),
     });
@@ -36,7 +38,7 @@ function EnquiryForm() {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h2>Send Enquiry</h2>
+                <h2>{t("title")}</h2>
 
                 <div className={styles.form}>
                     <Form {...form}>
@@ -47,7 +49,7 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Input placeholder="Name*" {...field} />
+                                            <Input placeholder={t("name_placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -59,7 +61,7 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Input placeholder="Company/Organization*" {...field} />
+                                            <Input placeholder={t("organization_placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -71,7 +73,7 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Input placeholder="Country*" {...field} />
+                                            <Input placeholder={t("country_placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -83,7 +85,7 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Input placeholder="Email*" {...field} />
+                                            <Input placeholder={t("email_placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -95,7 +97,7 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Input placeholder="Phone/WhatsApp*" {...field} />
+                                            <Input placeholder={t("phone_placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -107,19 +109,19 @@ function EnquiryForm() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormControl>
-                                            <Textarea placeholder="Message" {...field} className="resize-none" />
+                                            <Textarea placeholder={t("message_placeholder")} {...field} className="resize-none" />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
                             />
-                            <Button type="submit">Submit</Button>
+                            <Button type="submit">{t("submit_button")}</Button>
                         </form>
                     </Form>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default EnquiryForm
+export default EnquiryForm;
