@@ -5,7 +5,6 @@ import logo from "@/assets/SafeTech-Logo.svg";
 import styles from "@/styles/navbar.module.css";
 import { DefaultNavbarItem } from "./types";
 import * as React from "react";
-import Link from "next/link";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -25,12 +24,15 @@ import {
 import { MobileNav } from "./mobile-navbar";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { Link } from '@/i18n/routing';
 
 type DefaultNavbarProps = {
     mainNav: DefaultNavbarItem[];
 };
 
 export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
+
     return (
         <header>
             <nav className={styles.container}>
@@ -75,6 +77,7 @@ export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
 
                     <section className={styles.rightSide}>
                         <ModeToggle />
+                        <LanguageSwitcher />
                     </section>
                 </div>
             </nav>

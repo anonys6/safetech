@@ -1,7 +1,7 @@
 import styles from "@/styles/Footer.module.css";
 import logo from "@/assets/SafeTech-Logo.svg";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from '@/i18n/routing';
 import SocialList from "../ui/social-circle";
 import { SquareArrowOutUpRight } from "lucide-react";
 

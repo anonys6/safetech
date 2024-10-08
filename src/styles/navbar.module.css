@@ -41,6 +41,11 @@
     color: hsl(var(--primary));
 }
 
+.rightSide {
+    display: flex;
+    gap: 20px;
+}
+
 @media screen and (max-width: 1200px) {
     .wrapper {
         width: 100%;

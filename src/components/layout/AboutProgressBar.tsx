@@ -6,7 +6,7 @@ import { MdOutlineHomeWork } from "react-icons/md";
 import { Button } from '../ui/button';
 import { Progress } from '../ui/progress';
 // import { Progress } from "@nextui-org/progress";
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 const progressArray: {
   title: string,

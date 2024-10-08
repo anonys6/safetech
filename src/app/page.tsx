@@ -1,23 +1,35 @@
-import AboutProgressBar from "@/components/layout/AboutProgressBar";
-import EnquiryForm from "@/components/layout/EnquiryForm";
-import FAQ from "@/components/layout/FAQ";
-import HomeCarousel from "@/components/layout/home-carousel";
-import styles from "@/styles/home.module.css";
+// import AboutProgressBar from "@/components/layout/AboutProgressBar";
+// import EnquiryForm from "@/components/layout/EnquiryForm";
+// import FAQ from "@/components/layout/FAQ";
+// import HomeCarousel from "@/components/layout/home-carousel";
+// // import Testimonials from "@/components/layout/Testimonials";
+// import styles from "@/styles/home.module.css";
 
 
-export default function Home() {
-    return (
-        <main>
-            <HomeCarousel />
+// export default function Home() {
+//     return (
+//         <main>
+//             <HomeCarousel />
 
-            {/* <div className={styles.bg}> */}
-            <AboutProgressBar title={`About`} />
+//             {/* <div className={styles.bg}> */}
+//             <AboutProgressBar title={`About`} />
 
-            <div className={styles.wrapperFaqEnquiry}>
-                <FAQ />
-                <EnquiryForm />
-            </div>
-            {/* </div> */}
-        </main>
-    );
+//             {/* <Testimonials /> */}
+
+//             <div className={styles.wrapperFaqEnquiry}>
+//                 <FAQ />
+//                 <EnquiryForm />
+//             </div>
+//             {/* </div> */}
+//         </main>
+//     );
+// }
+
+
+import { redirect } from 'next/navigation'
+
+function RootPage() {
+    redirect('/en');
 }
+
+export default RootPage

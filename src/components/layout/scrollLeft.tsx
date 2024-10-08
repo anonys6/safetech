@@ -75,37 +75,37 @@ type CardType = {
 
 const cards: CardType[] = [
     {
-        url: "/imgs/abstract/1.jpg",
+        url: "https://picsum.photos/seed/1/800/800",
         title: "Title 1",
         id: 1,
     },
     {
-        url: "/imgs/abstract/2.jpg",
+        url: "https://picsum.photos/seed/2/800/800",
         title: "Title 2",
         id: 2,
     },
     {
-        url: "/imgs/abstract/3.jpg",
+        url: "https://picsum.photos/seed/3/800/800",
         title: "Title 3",
         id: 3,
     },
     {
-        url: "/imgs/abstract/4.jpg",
+        url: "https://picsum.photos/seed/4/800/800",
         title: "Title 4",
         id: 4,
     },
     {
-        url: "/imgs/abstract/5.jpg",
+        url: "https://picsum.photos/seed/5/800/800",
         title: "Title 5",
         id: 5,
     },
     {
-        url: "/imgs/abstract/6.jpg",
+        url: "https://picsum.photos/seed/6/800/800",
         title: "Title 6",
         id: 6,
     },
     {
-        url: "/imgs/abstract/7.jpg",
+        url: "https://picsum.photos/seed/7/800/800",
         title: "Title 7",
         id: 7,
     },
