@@ -70,5 +70,9 @@
         "title": "Request a Quote",
         "description": "Set your daily activity goal.",
         "cancel_button": "Cancel"
+    },
+    "Testimonials": {
+        "title": "Testimonials",
+        "subheading": "We Have Many Good Client's Reviews"
     }
 }

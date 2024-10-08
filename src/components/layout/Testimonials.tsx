@@ -1,57 +1,54 @@
 "use client";
 
-import React from 'react'
+import * as React from "react";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
-
-
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import styles from "@/styles/Testimonials.module.css";
 import { MdOutlineHomeWork } from 'react-icons/md';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-const testimonialsArray: {
-    name: string,
-    position: string,
-    testimonial: string
-}[] = [
-        {
-            name: "John Doe",
-            position: "CEO",
-            testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
-        },
-        {
-            name: "Jane Doe",
-            position: "CTO",
-            testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
-        },
-        {
-            name: "John Doe",
-            position: "CEO",
-            testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
-        },
-        {
-            name: "Jane Doe",
-            position: "CTO",
-            testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
-        },
-    ]
+const testimonialsArray = [
+    {
+        name: "John Doe",
+        position: "CEO",
+        testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
+    },
+    {
+        name: "Jane Doe",
+        position: "CTO",
+        testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
+    },
+    {
+        name: "John Doe",
+        position: "CEO",
+        testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
+    },
+    {
+        name: "Jane Doe",
+        position: "CTO",
+        testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, orci eget varius tincidunt, libero libero lacinia odio, nec scelerisque purus elit vel libero."
+    }
+];
 
 function Testimonials() {
+    const t = useTranslations("Testimonials");
+
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div className={styles.leftSide}>
                     <div className={styles.heading}>
                         <MdOutlineHomeWork size={24} />
-                        <h3>Testimonials</h3>
+                        <h3>{t("title")}</h3>
                     </div>
-                    <h2>We Have Many Good Client&apos;s Reviews</h2>
+                    <h2>{t("subheading")}</h2>
                 </div>
 
                 <div className={styles.rightSide}>
@@ -68,11 +65,9 @@ function Testimonials() {
                         }}
                     >
                         <CarouselContent>
-                            {/* <CarouselItem></CarouselItem> */}
                             {testimonialsArray.map((item, index) => (
                                 <CarouselItem key={index} className={styles.itemBox}>
                                     <TestimonialCard name={item.name} position={item.position} testimonial={item.testimonial} />
-                                    {/* <TestimonialCard name={item.name} position={item.position} testimonial={item.testimonial} /> */}
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
@@ -82,7 +77,7 @@ function Testimonials() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Testimonials;
@@ -108,6 +103,7 @@ const TestimonialCard = ({ name, position, testimonial }: { name: string, positi
         </div>
     );
 };
+
 
 // import styled from "styled-components";
 
