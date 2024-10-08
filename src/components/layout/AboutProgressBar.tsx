@@ -35,6 +35,7 @@ function AboutProgressBar({ title }: { title: string }) {
           <div className={styles.aboutHeading}>
             <MdOutlineHomeWork size={24} />
             <h3>{t('title')}</h3>
+            <h1 style={{ display: 'none' }}>{title}</h1>
           </div>
           <h2>{t('heading')}</h2>
           <p>{t('intro')}</p>
