@@ -118,3 +118,13 @@
     }
 
 }
+
+
+/* testimonials.module.css */
+.testimonial-card-dark {
+    background: linear-gradient(135deg, #262626, transparent);
+}
+
+.testimonial-card-light {
+    background: linear-gradient(135deg, #D9D9D955, transparent);
+}

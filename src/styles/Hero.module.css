@@ -1,0 +1,74 @@
+/* best breakpoints for css
+    * 320px
+    * 480px
+    * 600px
+    * 768px
+    * 1024px
+    * 1200px
+    * 1440px
+    * 1920px
+
+    320px 480px •768px •1024px •1300px •1920px
+*/
+
+.container {
+    /* gap: 20px; */
+    justify-content: flex-start;
+    padding-left: 6rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .heroText {
+        font-size: 5rem;
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .heroText {
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    
+    .heroText {
+        font-size: 6rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 4rem;
+    }
+
+    .heroText {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 2rem;
+    }
+
+    .heroText {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        padding-left: 1rem;
+    }
+
+    .heroText {
+        font-size: 2rem;
+    }
+}
