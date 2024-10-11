@@ -16,6 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: hsl(var(--background));
     height: 64px;
     border-bottom: 1px solid hsl(var(--border));
 
@@ -28,7 +29,7 @@
     justify-content: space-between;
 }
 
-.wrapper > a {
+.wrapper>a {
     display: flex;
     align-items: center;
 }
