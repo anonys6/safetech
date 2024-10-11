@@ -13,6 +13,8 @@ import styles from "@/styles/Testimonials.module.css";
 import { MdOutlineHomeWork } from 'react-icons/md';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { MagicCard } from "../ui/magic-card";
+import { useTheme } from "next-themes";
 
 const testimonialsArray = [
     {
@@ -47,6 +49,7 @@ function Testimonials() {
                     <div className={styles.heading}>
                         <MdOutlineHomeWork size={24} />
                         <h3>{t("title")}</h3>
+
                     </div>
                     <h2>{t("subheading")}</h2>
                 </div>
@@ -83,24 +86,32 @@ function Testimonials() {
 export default Testimonials;
 
 const TestimonialCard = ({ name, position, testimonial }: { name: string, position: string, testimonial: string }) => {
+    const { theme } = useTheme();
+    console.log(theme);
     return (
-        <div className={styles.wrapperTestimonial}>
-            <div className={styles.top}>
-                <Image
-                    src="https://picsum.photos/200/200"
-                    alt="profile"
-                    width={100}
-                    height={100}
-                />
-                <div className={styles.nameBox}>
-                    <h3>{name}</h3>
-                    <p>{position}</p>
+        <MagicCard
+            className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
+            gradientColor={theme === "dark" ? "#262626" : theme === "system" ? "rgba(38, 38, 38, 0.1)" : "#D9D9D955"}
+        >
+
+            <div className={styles.wrapperTestimonial}>
+                <div className={styles.top}>
+                    <Image
+                        src="https://picsum.photos/200/200"
+                        alt="profile"
+                        width={100}
+                        height={100}
+                    />
+                    <div className={styles.nameBox}>
+                        <h3>{name}</h3>
+                        <p>{position}</p>
+                    </div>
+                </div>
+                <div className={styles.bottom}>
+                    <p>{testimonial}</p>
                 </div>
             </div>
-            <div className={styles.bottom}>
-                <p>{testimonial}</p>
-            </div>
-        </div>
+        </MagicCard>
     );
 };
 

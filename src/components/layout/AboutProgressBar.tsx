@@ -7,6 +7,8 @@ import { Button } from '../ui/button';
 import { Progress } from '../ui/progress';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import NumberTicker from '../ui/number-ticker';
+// import TextRevealByWord from '../ui/text-reveal';
 
 const progressArray = [
   { key: "progress_innovation", value: 90 },
@@ -38,6 +40,7 @@ function AboutProgressBar({ title }: { title: string }) {
             <h1 style={{ display: 'none' }}>{title}</h1>
           </div>
           <h2>{t('heading')}</h2>
+          {/* <TextRevealByWord text={t('heading')} /> */}
           <p>{t('intro')}</p>
 
           <Link href='/about-us'>
@@ -49,7 +52,9 @@ function AboutProgressBar({ title }: { title: string }) {
               <div key={index} className={styles.progress}>
                 <div className={styles.progressTitle}>
                   <p>{t(progress.key)}</p>
-                  <span>{progress.value}%</span>
+                  <span>
+                    <NumberTicker value={progress.value} />%
+                  </span>
                 </div>
                 <Progress value={progress.value} />
               </div>

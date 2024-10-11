@@ -67,10 +67,23 @@
     border-radius: 20px;
 }
 
+/* progress.module.css */
+.progressBar {
+    transition: width 5s ease;
+    /* Adjust the duration as needed */
+    background-color: #3b82f6;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 480px) {
     .wrapper {
         flex-direction: column;
         padding: 0 10px;
     }
-    
 }
