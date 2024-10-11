@@ -4,6 +4,9 @@
     flex-direction: column;
     background-color: var(--bg-footer);
     color: hsl(0 0% 93.33%);
+    position: fixed;
+    bottom: 0;
+    z-index: -10;
 }
 
 .wrapper {

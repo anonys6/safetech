@@ -1,11 +1,12 @@
 .wrapperFaqEnquiry {
-    display: flex;
-    flex-direction: row; 
-    padding: 70px 162px;
+	display: flex;
+	flex-direction: row;
+	padding: 70px 162px;
+	background-color: hsl(var(--background));
 }
 
-.wrapperFaqEnquiry > div {
-    flex: 1;
+.wrapperFaqEnquiry>div {
+	flex: 1;
 }
 
 .bg {
@@ -18,9 +19,11 @@
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 100% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
@@ -28,10 +31,10 @@
 
 
 @media screen and (max-width: 480px) {
-    .wrapperFaqEnquiry {
-        flex-direction: column;
-        padding: 70px 10px;
-        gap: 40px;
-    }
-    
+	.wrapperFaqEnquiry {
+		flex-direction: column;
+		padding: 70px 10px;
+		gap: 40px;
+	}
+
 }

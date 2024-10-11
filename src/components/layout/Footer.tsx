@@ -37,10 +37,10 @@ function Footer() {
             <div className={styles.wrapper}>
                 <div className={styles.col1}>
                     <Image src={logo} alt="SafeTech" width={174} height={42} />
-                    <p>{t("description")}</p>
+                    <p className="hidden sm:block">{t("description")}</p>
                     <Link href="/privacy-policy">{t("privacy_policy")}</Link>
 
-                    <div className={styles.socialIcons}>
+                    <div className={`hidden sm:flex ${styles.socialIcons}`}>
                         <SocialList />
                     </div>
                 </div>
@@ -83,7 +83,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className={styles.col4}>
+                <div className={`flex flex-row justify-between w-full items-end ${styles.col4}`}>
                     <ul className={styles.itemList}><h2>{t("pwas_title")}:</h2>
                         {footerArray.pwas.map((item, index) => (
                             <li key={index} className={styles.listWrapper}>
@@ -92,6 +92,9 @@ function Footer() {
                             </li>
                         ))}
                     </ul>
+                    <div className={`sm:hidden flex ${styles.socialIcons}`}>
+                        <SocialList />
+                    </div>
                 </div>
             </div>
 
