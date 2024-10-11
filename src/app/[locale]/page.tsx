@@ -8,7 +8,7 @@ import styles from "@/styles/home.module.css";
 
 export default function Home() {
     return (
-        <main className="sm:pb-[457px] pb-[872px]">
+        <main>
             <HomeCarousel />
 
             {/* <div className={styles.bg}> */}
