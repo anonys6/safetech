@@ -26,7 +26,7 @@ import { Menu } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from '@/i18n/routing';
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 
 type DefaultNavbarProps = {
     mainNav: DefaultNavbarItem[];
