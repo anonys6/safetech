@@ -51,6 +51,11 @@
 // }
 
 import pwasImage from "@/assets/pwas-hero.webp";
+import banner2 from "@/assets/hero-banner-2.webp";
+import banner3 from "@/assets/hero-banner-3.webp";
+import banner4 from "@/assets/hero-banner-4.webp";
+import banner5 from "@/assets/hero-banner-5.webp";
+import banner6 from "@/assets/hero-banner-6.webp";
 
 import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -76,7 +81,7 @@ export default function HomeCarousel() {
                 </div>
                 <div className={styles.embla__slide}>
                     <Image
-                        src={pwasImage}
+                        src={banner2}
                         alt='pwas-hero'
                         // fill
                         height={900}
@@ -84,7 +89,34 @@ export default function HomeCarousel() {
                     /></div>
                 <div className={styles.embla__slide}>
                     <Image
-                        src={pwasImage}
+                        src={banner3}
+                        alt='pwas-hero'
+                        // fill
+                        height={900}
+                        className={styles.embla__slide__img}
+                    />
+                </div>
+                <div className={styles.embla__slide}>
+                    <Image
+                        src={banner4}
+                        alt='pwas-hero'
+                        // fill
+                        height={900}
+                        className={styles.embla__slide__img}
+                    />
+                </div>
+                <div className={styles.embla__slide}>
+                    <Image
+                        src={banner5}
+                        alt='pwas-hero'
+                        // fill
+                        height={900}
+                        className={styles.embla__slide__img}
+                    />
+                </div>
+                <div className={styles.embla__slide}>
+                    <Image
+                        src={banner6}
                         alt='pwas-hero'
                         // fill
                         height={900}
