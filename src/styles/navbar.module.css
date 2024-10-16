@@ -16,7 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: hsl(var(--background));
+    /* background-color: hsl(var(--background)); */
     height: 64px;
     border-bottom: 1px solid hsl(var(--border));
 

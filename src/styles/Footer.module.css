@@ -4,6 +4,7 @@
     flex-direction: column;
     background-color: var(--bg-footer);
     color: hsl(0 0% 93.33%);
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -44,7 +45,7 @@
 
 .wrapperContact>h3 {
     font-size: 18px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .listWrapper {
