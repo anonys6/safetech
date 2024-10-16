@@ -37,4 +37,16 @@
 		gap: 40px;
 	}
 
+	.floatingDiv {
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		background-color: grey;
+		padding: 10px 0;
+		width: 100%;
+	}
+
 }
+

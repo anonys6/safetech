@@ -94,5 +94,10 @@ export const navbarConfig: DefaultNavbarItem[] = [
         title: "Contact Us",
         href: "/contact-us",
         children: [],
+    },
+    {
+        title: "Shop",
+        href: "/shop",
+        children: []
     }
 ];
