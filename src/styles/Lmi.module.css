@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.descList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.keyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 10px;
+}
+
+.keyList>li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.wrapperFaqEnquiry {
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    background-color: hsl(var(--background));
+}
+
+.wrapperFaqEnquiry>div {
+    flex: 1;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .wrapperFaqEnquiry {
+        flex-direction: column;
+        padding: 70px 10px;
+        gap: 40px;
+    }
+}

@@ -40,7 +40,7 @@ function EnquiryForm() {
             <div className={styles.wrapper}>
                 <h2>{t("title")}</h2>
 
-                <div className={styles.form}>
+                <div className="px-5 ">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                             <FormField
