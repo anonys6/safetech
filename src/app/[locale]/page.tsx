@@ -9,6 +9,7 @@ import heroImage from "@/assets/hero-bg.svg";
 import Image from 'next/image';
 import Testimonials from "@/components/layout/Testimonials";
 import LogoMarquee from "@/components/layout/LogoMarquee";
+import { BentoDemo } from "@/components/layout/ProductBento";
 
 
 export default function Home() {
@@ -29,6 +30,9 @@ export default function Home() {
             <AboutProgressBar title={`About`} />
 
             <LogoMarquee />
+            <div className="p-8 lg:py-20 lg:px-40">
+                <BentoDemo />
+            </div>
 
             <Testimonials />
 

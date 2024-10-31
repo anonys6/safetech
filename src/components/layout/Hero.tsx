@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { IoIosArrowForward, IoMdArrowForward } from "react-icons/io";
+import { AnimatedShinyTextDemo } from './HeroShinyButton';
 
 const Hero = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -10,6 +11,7 @@ const Hero = () => {
 
     return (
         <div className="h-[calc(60vh-63px)] flex items-center justify-center font-bold flex-col gap-4 p-5 text-center lg:p-52 lg:h-[calc(100vh-63px)]">
+            <AnimatedShinyTextDemo />
             <h1 className='text-[30px] lg:text-[64px] drop-shadow-md z-10 text-center'>Pioneering Safety with Advanced Solutions</h1>
             <p className='text-xl z-10 font-normal drop-shadow-md text-gray-400'>Enhancing Safety and Efficiency in Workplaces Worldwide</p>
             <div className='flex gap-8 '>
