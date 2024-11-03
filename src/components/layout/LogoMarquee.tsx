@@ -4,40 +4,41 @@ import Image from "next/image";
 
 const reviews = [
     {
-        name: "Jack",
-        username: "@jack",
+        name: "MSA",
+        username: "@msa",
         body: "I've never seen anything like this before. It's amazing. I love it.",
-        img: "https://avatar.vercel.sh/jack",
+        // img: "https://avatar.vercel.sh/jack",
+        img: "https://picsum.photos/100/100",
     },
     {
-        name: "Jill",
-        username: "@jill",
+        name: "Clay",
+        username: "@clay",
         body: "I don't know what to say. I'm speechless. This is amazing.",
-        img: "https://avatar.vercel.sh/jill",
+        img: "https://picsum.photos/101/101",
     },
     {
-        name: "John",
-        username: "@john",
+        name: "Code",
+        username: "@code",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/john",
+        img: "https://picsum.photos/102/102",
     },
     {
         name: "Jane",
-        username: "@jane",
+        username: "@zeno",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jane",
+        img: "https://picsum.photos/103/103",
     },
     {
-        name: "Jenny",
-        username: "@jenny",
+        name: "Warrior",
+        username: "@warrior",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jenny",
+        img: "https://picsum.photos/104/104",
     },
     {
-        name: "James",
-        username: "@james",
+        name: "Singularity",
+        username: "@singularity",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/james",
+        img: "https://picsum.photos/105/105",
     },
 ];
 
