@@ -30,6 +30,7 @@ export default function Home() {
 
             {/* <div className={styles.bg}> */}
             <AboutProgressBar title={`About`} />
+            
             <div className="flex w-full">
                 <LogoMarquee />
             </div>

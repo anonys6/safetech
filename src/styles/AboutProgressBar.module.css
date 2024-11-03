@@ -24,7 +24,6 @@
 
 .contentWrapper {
     flex: 1;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -65,12 +64,4 @@
     border: 1px solid hsl(var(--border));
     padding: 40px;
     border-radius: 20px;
-}
-
-@media screen and (max-width: 480px) {
-    .wrapper {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-    
 }

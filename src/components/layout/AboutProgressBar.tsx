@@ -18,10 +18,10 @@ const progressArray = [
 
 function AboutProgressBar({ title }: { title: string }) {
     const t = useTranslations('About');
-
+    
     return (
         <div className={`${styles.container} z-10`}>
-            <div className={styles.wrapper}>
+            <div className="flex items-center px-5 md:px-12 xl:px-32 flex-col lg:flex-row">
                 <div className={styles.imgWrapper}>
                     <Image
                         src={workerImage}
@@ -31,7 +31,7 @@ function AboutProgressBar({ title }: { title: string }) {
                     />
                 </div>
 
-                <div className={styles.contentWrapper}>
+                <div className="flex-1 flex flex-col gap-5 lg:pl-4">
                     <div className={styles.aboutHeading}>
                         <MdOutlineHomeWork size={24} />
                         <h3>{t('title')}</h3>
@@ -44,7 +44,7 @@ function AboutProgressBar({ title }: { title: string }) {
                         <Button className='z-10 relative'>{t('discover_more')}</Button>
                     </Link>
 
-                    <div className={styles.sliderWrapper}>
+                    <div className="flex flex-col gap-6 2sm:gap-8 border rounded-xl p-6 2sm:p-10">
                         {progressArray.map((progress, index) => (
                             <div key={index} className={styles.progress}>
                                 <div className={styles.progressTitle}>
