@@ -7,7 +7,7 @@ import Hero from "@/components/layout/Hero";
 import styles from "@/styles/home.module.css";
 import heroImage from "@/assets/hero-bg.svg";
 import Image from 'next/image';
-import Testimonials from "@/components/layout/Testimonials";
+// import Testimonials from "@/components/layout/Testimonials";
 import LogoMarquee from "@/components/layout/LogoMarquee";
 import { BentoDemo } from "@/components/layout/ProductBento";
 import ProductSupport from "@/components/layout/ProductSupport";
@@ -25,7 +25,7 @@ export default function Home() {
                 quality={100}
                 className='absolute z-0 w-full'
             />
-            
+
             <Hero />
 
             {/* <div className={styles.bg}> */}
@@ -38,11 +38,10 @@ export default function Home() {
                 <BentoDemo />
             </div>
 
-            <div>
-                <ProductSupport />
-            </div>
 
-            <Testimonials />
+            <ProductSupport />
+
+            {/* <Testimonials /> */}
 
             <div className={styles.wrapperFaqEnquiry}>
                 <FAQ />

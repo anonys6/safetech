@@ -27,7 +27,7 @@ const ProductSupportCard = ({ icon, title, desc, image }: ProductSupportCardProp
                 background: isHovered ? `linear-gradient(transparent 42%, rgba(246,107,21,0.17) 100%)` : undefined,
                 backgroundSize: "cover",
             }}
-            className='border-2 rounded-2xl pt-12 pl-12 text-left flex flex-col items-start gap-2  cursor-pointer dark:bg-none'
+            className='border-2 rounded-2xl pt-8 pl-8 sm:pt-6 sm:pl-6 lg:pt-12 lg:pl-12  text-left flex flex-col items-start gap-2  cursor-pointer dark:bg-none'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
