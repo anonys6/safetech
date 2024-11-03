@@ -30,12 +30,12 @@ export default function Home() {
 
             {/* <div className={styles.bg}> */}
             <AboutProgressBar title={`About`} />
-            
+
             <div className="flex w-full">
                 <LogoMarquee />
             </div>
 
-            <div className="p-8 lg:py-20 lg:px-40">
+            <div className="py-16 px-5 sm:px-12 md:px-20 lg:px-28 border">
                 <BentoDemo />
             </div>
 
