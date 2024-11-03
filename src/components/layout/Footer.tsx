@@ -1,4 +1,3 @@
-import styles from "@/styles/Footer.module.css";
 import logo from "@/assets/SafeTech-Logo.svg";
 import Image from "next/image";
 import { Link } from '@/i18n/routing';

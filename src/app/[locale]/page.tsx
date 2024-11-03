@@ -4,7 +4,6 @@ import FAQ from "@/components/layout/FAQ";
 import Hero from "@/components/layout/Hero";
 // import HomeCarousel from "@/components/layout/home-carousel";
 // import Testimonials from "@/components/layout/Testimonials";
-import styles from "@/styles/home.module.css";
 import heroImage from "@/assets/hero-bg.svg";
 import Image from 'next/image';
 // import Testimonials from "@/components/layout/Testimonials";
