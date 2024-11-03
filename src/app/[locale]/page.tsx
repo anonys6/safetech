@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Testimonials from "@/components/layout/Testimonials";
 import LogoMarquee from "@/components/layout/LogoMarquee";
 import { BentoDemo } from "@/components/layout/ProductBento";
+import ProductSupport from "@/components/layout/ProductSupport";
 
 
 export default function Home() {
@@ -35,6 +36,10 @@ export default function Home() {
 
             <div className="p-8 lg:py-20 lg:px-40">
                 <BentoDemo />
+            </div>
+
+            <div>
+                <ProductSupport />
             </div>
 
             <Testimonials />
