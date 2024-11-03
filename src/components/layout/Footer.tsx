@@ -33,49 +33,53 @@ function Footer() {
     const t = useTranslations("Footer");
 
     return (
-        <footer className={styles.container}>
-            <div className={styles.wrapper}>
-                <div className={styles.col1}>
-                    <Image src={logo} alt="SafeTech" width={174} height={42} />
-                    <p className="hidden sm:block">{t("description")}</p>
-                    <Link href="/privacy-policy">{t("privacy_policy")}</Link>
-
-                    <div className={`hidden sm:flex ${styles.socialIcons}`}>
+        <footer className="flex pt-16 flex-col bg-[var(--bg-footer)] gap-4">
+            <div className="items-start gap-4 2sm:gap-8 px-4 2sm:px-8 grid grid-cols-2  lg:grid-cols-9">
+                <div className="flex flex-col gap-4 col-span-2 2sm:col-span-1 lg:col-span-3">
+                    <Image
+                        style={{ filter: "brightness(200%) contrast(200%) saturate(0%) blur(0px) hue-rotate(0deg)" }}
+                        src={logo}
+                        alt="SafeTech"
+                        width={174}
+                        height={42}
+                    />
+                    <p>{t("description")}</p>
+                    <div className="hidden 2sm:flex">
                         <SocialList />
                     </div>
                 </div>
 
-                <div className={styles.col2}>
-                    <h2>{t("keep_in_touch")}</h2>
-                    <div className={styles.wrapperContact}>
-                        <h3>{t("email_label")}</h3>
+                <div className="flex flex-col gap-1 2sm:gap-4 col-span-2 2sm:col-span-1 lg:col-span-2">
+                    <h2 className="text-2xl">{t("keep_in_touch")}</h2>
+                    <div>
+                        <h3 className="text-xl font-bold">{t("email_label")}</h3>
                         <Link href="mailto:info@safetechco.com">info@safetechco.com</Link>
                     </div>
 
-                    <div className={styles.wrapperContact}>
-                        <h3>{t("phone_label")}</h3>
+                    <div>
+                        <h3 className="text-xl font-bold">{t("phone_label")}</h3>
                         <Link href="tel:+966578490480">+966 578490480</Link>
                     </div>
 
-                    <div className={styles.wrapperContact}>
-                        <h3>{t("address_label")}</h3>
+                    <div>
+                        <h3 className="text-xl font-bold">{t("address_label")}</h3>
                         <p>{t("address_details")}</p>
                     </div>
                 </div>
 
-                <div className={styles.col3}>
-                    <ul className={styles.itemList}><h2>{t("lmi_title")}:</h2>
+                <div className="col-span-1 lg:col-span-2">
+                    <ul className="flex flex-col"><h2>{t("lmi_title")}:</h2>
                         {footerArray.lmi.map((item, index) => (
-                            <li key={index} className={styles.listWrapper}>
+                            <li key={index} className="flex gap-3 items-center">
                                 <SquareArrowOutUpRight size={16} />
                                 <Link href={item.href}>{item.title}</Link>
                             </li>
                         ))}
                     </ul>
 
-                    <ul className={styles.itemList}>
+                    <ul className="flex flex-col">
                         {footerArray.others.map((item, index) => (
-                            <li key={index} className={styles.listWrapper}>
+                            <li key={index} className="flex gap-3 items-center">
                                 <SquareArrowOutUpRight size={16} />
                                 <Link href={item.href}>{t(`others.${item.title}`)}</Link>
                             </li>
@@ -83,22 +87,23 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className={`flex flex-row justify-between w-full items-end ${styles.col4}`}>
-                    <ul className={styles.itemList}><h2>{t("pwas_title")}:</h2>
+                <div className="flex flex-row justify-between w-full items-end col-span-1 lg:col-span-2">
+                    <ul className="flex flex-col">
+                        <h2>{t("pwas_title")}:</h2>
                         {footerArray.pwas.map((item, index) => (
-                            <li key={index} className={styles.listWrapper}>
+                            <li key={index} className="flex gap-3 items-center">
                                 <SquareArrowOutUpRight size={16} />
                                 <Link href={item.href}>{item.title}</Link>
                             </li>
                         ))}
                     </ul>
-                    <div className={`sm:hidden flex ${styles.socialIcons}`}>
-                        <SocialList />
-                    </div>
+                </div>
+                <div className="2sm:hidden flex">
+                    <SocialList />
                 </div>
             </div>
 
-            <div className={styles.wrapperCopyright}>
+            <div className="border-t flex justify-center py-5">
                 <p>{t("copyright")}</p>
             </div>
         </footer>
