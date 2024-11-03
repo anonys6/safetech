@@ -12,8 +12,8 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 const features = [
     {
         Icon: FileTextIcon,
-        name: "Save your files",
-        description: "We automatically save your files as you type.",
+        name: "Load Moment Indicator",
+        description: "See when your files are being loaded.",
         href: "/",
         cta: "Learn more",
         background: <img alt="my image" className="absolute -right-20 -top-20 opacity-60" />,
@@ -21,8 +21,8 @@ const features = [
     },
     {
         Icon: InputIcon,
-        name: "Full text search",
-        description: "Search through all your files in one place.",
+        name: "PWAS System",
+        description: "Use the search bar to quickly find files.",
         href: "/",
         cta: "Learn more",
         background: <img alt="my image" className="absolute -right-20 -top-20 opacity-60" />,
@@ -30,7 +30,7 @@ const features = [
     },
     {
         Icon: GlobeIcon,
-        name: "Multilingual",
+        name: "Accessories",
         description: "Supports 100+ languages and counting.",
         href: "/",
         cta: "Learn more",
@@ -39,7 +39,7 @@ const features = [
     },
     {
         Icon: CalendarIcon,
-        name: "Calendar",
+        name: "Safety Sensors",
         description: "Use the calendar to filter your files by date.",
         href: "/",
         cta: "Learn more",
@@ -48,7 +48,7 @@ const features = [
     },
     {
         Icon: BellIcon,
-        name: "Notifications",
+        name: "More Products",
         description:
             "Get notified when someone shares a file or mentions you in a comment.",
         href: "/",

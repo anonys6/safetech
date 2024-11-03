@@ -13,8 +13,8 @@ const Hero = () => {
     return (
         <div className="h-[calc(60vh-63px)] flex items-center justify-center font-bold flex-col gap-4 p-5 text-center lg:p-52 lg:h-[calc(100vh-63px)]">
             <AnimatedShinyTextDemo />
-            <h1 className='text-[30px] lg:text-[64px] drop-shadow-md z-10 text-center'>Pioneering Safety with Advanced Solutions</h1>
-            <p className='text-xl z-10 font-normal drop-shadow-md text-gray-400'>Enhancing Safety and Efficiency in Workplaces Worldwide</p>
+            <h1 className='text-[30px] lg:text-[64px] drop-shadow-sm z-10 text-center'>Pioneering Safety with Advanced Solutions</h1>
+            <p className='text-xl z-10 font-normal drop-shadow-sm text-gray-500 dark:text-gray-400'>Enhancing Safety and Efficiency in Workplaces Worldwide</p>
             <div className='flex gap-8 '>
                 <Button
                     variant="expandIconGooeyLeft" Icon={ArrowRightIcon} iconPlacement="right"
@@ -27,7 +27,7 @@ const Hero = () => {
                 </Button>
                 <Button
                     variant="linkHover2ExpandIcon" Icon={ArrowRightIcon} iconPlacement="right"
-                    className='font-semibold text-md z-10 bg-transparent hover:bg-transparent p-0  rounded-none'
+                    className='font-semibold text-md z-10 bg-transparent hover:bg-transparent p-0 rounded-none text-primary dark:text-white'
                 // onMouseEnter={() => setIsHovered(true)}
                 // onMouseLeave={() => setIsHovered(false)}
                 >

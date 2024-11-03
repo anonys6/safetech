@@ -24,6 +24,7 @@ export default function Home() {
                 quality={100}
                 className='absolute z-0 w-full'
             />
+            
             <Hero />
 
             {/* <div className={styles.bg}> */}

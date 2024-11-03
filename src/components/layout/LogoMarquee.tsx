@@ -8,37 +8,37 @@ const reviews = [
         username: "@msa",
         body: "I've never seen anything like this before. It's amazing. I love it.",
         // img: "https://avatar.vercel.sh/jack",
-        img: "https://picsum.photos/100/100",
+        img: "https://picsum.photos/100",
     },
     {
         name: "Clay",
         username: "@clay",
         body: "I don't know what to say. I'm speechless. This is amazing.",
-        img: "https://picsum.photos/101/101",
+        img: "https://picsum.photos/101",
     },
     {
         name: "Code",
         username: "@code",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://picsum.photos/102/102",
+        img: "https://picsum.photos/102",
     },
     {
         name: "Jane",
         username: "@zeno",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://picsum.photos/103/103",
+        img: "https://picsum.photos/103",
     },
     {
         name: "Warrior",
         username: "@warrior",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://picsum.photos/104/104",
+        img: "https://picsum.photos/104",
     },
     {
         name: "Singularity",
         username: "@singularity",
         body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://picsum.photos/105/105",
+        img: "https://picsum.photos/105",
     },
 ];
 
