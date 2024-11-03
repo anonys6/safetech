@@ -98,9 +98,6 @@
 
 // export default FAQ;
 
-
-import styles from "@/styles/faq.module.css";
-
 const faqArray: {
     title: string
     content: string
@@ -159,14 +156,14 @@ export function FAQ() {
     const t = useTranslations("FAQ");
 
     return (
-        <div className={styles.container}>
-            <h2>{t("heading")}</h2>
+        <div className="px-5 flex-1 flex flex-col gap-4 font-bold">
+            <h2 className="text-3xl ">{t("heading")}</h2>
 
 
             <Accordion type="single" collapsible className="w-full">
                 {faqArray.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="hover:no-underline py-2 text-medium">{t(`faq${index + 1}_title`)}</AccordionTrigger>
+                        <AccordionTrigger className="hover:no-underline py-2 text-medium text-left">{t(`faq${index + 1}_title`)}</AccordionTrigger>
                         <AccordionContent>
                             <div dangerouslySetInnerHTML={{ __html: t(`faq${index + 1}_content`) }} />
                         </AccordionContent>

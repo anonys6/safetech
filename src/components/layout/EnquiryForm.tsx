@@ -36,9 +36,9 @@ function EnquiryForm() {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.wrapper}>
-                <h2>{t("title")}</h2>
+        <div className="flex flex-col px-5 flex-1">
+            <div className='flex flex-col gap-6'>
+                <h2 className='text-center text-3xl text-primary font-bold'>{t("title")}</h2>
 
                 <div className="px-5 ">
                     <Form {...form}>

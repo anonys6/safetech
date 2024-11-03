@@ -44,7 +44,7 @@ export default function Home() {
 
             {/* <Testimonials /> */}
 
-            <div className={styles.wrapperFaqEnquiry}>
+            <div className="flex flex-col gap-16 lg:flex-row justify-center px-5 sm:px-8 md:px-16 py-16 bg-background ">
                 <FAQ />
                 <EnquiryForm />
             </div>
