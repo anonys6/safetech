@@ -32,7 +32,7 @@ const productSupports = [
 
 const ProductSupport = () => {
     return (
-        <div className='flex w-screen py-16 justify-center'>
+        <div className='flex w-full py-16 justify-center'>
             <div className='flex w-[1200px] flex-col gap-4 items-center px-4 lg:px-20 text-center leading-snug'>
                 <h2 className='text-[48px]'>Experience the simplicity of building live experiences</h2>
                 <p className='text-gray-500 dark:text-gray-400 font-light text-lg'>From one-to-one interactions to unlimited scalability in a single SDK. No need to set up, babysit, and burn dollars with multiple SDKs.</p>
