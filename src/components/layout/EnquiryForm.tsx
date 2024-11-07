@@ -16,20 +16,29 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from '../ui/textarea';
 import { useTranslations } from "next-intl";
 
+const formSchema = z.object({
+    name: z.string().min(2, {
+        message: "Name must be at least 2 characters long",
+    }),
+    organization: z.string().optional(),
+    country: z.string().optional(),
+    email: z.string().email({
+        message: "Invalid email address",
+    }),
+    phone: z.string().optional(),
+    message: z.string().optional(),
+});
+
+type FormSchema = z.infer<typeof formSchema>;
+
 function EnquiryForm() {
     const t = useTranslations("EnquiryForm");
 
-    const formSchema = z.object({
-        username: z.string().min(2, {
-            message: t("validation.username"),
-        }),
-    });
-
-    const form = useForm({
+    const form = useForm<FormSchema>({
         resolver: zodResolver(formSchema),
     });
 
-    const onSubmit = (data: unknown) => {
+    const onSubmit = (data: FormSchema) => {
         console.log(data);
         // Handle form submission
     };
@@ -54,6 +63,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <FormField
                                 control={form.control}
                                 name="organization"
@@ -66,6 +76,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <FormField
                                 control={form.control}
                                 name="country"
@@ -78,6 +89,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <FormField
                                 control={form.control}
                                 name="email"
@@ -90,6 +102,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <FormField
                                 control={form.control}
                                 name="phone"
@@ -102,6 +115,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <FormField
                                 control={form.control}
                                 name="message"
@@ -114,6 +128,7 @@ function EnquiryForm() {
                                     </FormItem>
                                 )}
                             />
+
                             <Button type="submit">{t("submit_button")}</Button>
                         </form>
                     </Form>
