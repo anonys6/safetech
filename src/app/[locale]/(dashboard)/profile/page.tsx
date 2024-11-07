@@ -36,7 +36,7 @@ export default function Page() {
                         </Breadcrumb>
                     </div>
                 </header>
-                <div className="flex flex-1 flex-col gap-8 p-16 pt-0">
+                <div className="flex flex-1 flex-col gap-8 p-4 xl:p-16 pt-0">
                     <div className="bg-muted rounded-md border-accent border-2">
                         <div className="flex justify-between p-6 border-accent border-b-2">
                             <div className="flex flex-col gap-4">
