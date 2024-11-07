@@ -26,6 +26,7 @@ import { Menu } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from '@/i18n/routing';
+import NavbarAvatar from "./NavbarAvatar";
 // import { Button } from "../ui/button";
 
 type DefaultNavbarProps = {
@@ -85,6 +86,9 @@ export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
                         </Link> */}
                         <ModeToggle />
                         <LanguageSwitcher />
+                        <NavbarAvatar />
+
+
                     </section>
                 </div>
             </nav>
