@@ -14,6 +14,7 @@ import {
     SidebarTrigger,
 } from "@/components/ui/sidebar"
 import Image from "next/image"
+import AvatarImage from "@/assets/avatar.jpeg";
 
 
 export default function Page() {
@@ -49,7 +50,7 @@ export default function Page() {
                             </div>
                             <Image
                                 className="rounded-full"
-                                src="https://picsum.photos/100/100"
+                                src={AvatarImage.src}
                                 alt="avatar"
                                 width={100}
                                 height={100}
