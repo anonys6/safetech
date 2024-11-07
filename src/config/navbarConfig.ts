@@ -99,5 +99,10 @@ export const navbarConfig: DefaultNavbarItem[] = [
         title: "Shop",
         href: "/shop",
         children: []
+    },
+    {
+        title: "Profile",
+        href: "/profile",
+        children: []
     }
 ];
