@@ -17,13 +17,14 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import avatarImage from "@/assets/avatar.jpeg";
 
 // This is sample data.
 const data = {
   user: {
     name: "msalam",
     email: "info@safetechco.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: avatarImage.src,
   },
   teams: [
     {

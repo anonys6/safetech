@@ -1,7 +1,7 @@
 "use client"
 
 import {
-  Bell,
+  House,
   LogOut,
 } from "lucide-react"
 
@@ -26,6 +26,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { CaretSortIcon } from "@radix-ui/react-icons"
+import { useRouter } from "next/navigation"
 
 export function NavUser({
   user,
@@ -37,6 +38,13 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
+
+  const router = useRouter();
+
+  const handleLogout = () => {
+    console.log('Logging out')
+    router.push("/")
+  }
 
   return (
     <SidebarMenu>
@@ -78,13 +86,13 @@ export function NavUser({
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Bell />
+              <DropdownMenuItem onClick={() => router.push("/")}>
+                <House />
                 Home
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={handleLogout}>
               <LogOut />
               Log out
             </DropdownMenuItem>
