@@ -4,7 +4,7 @@
 import { Providers } from "../../providers"; // Adjust the path if needed
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-// import "./globals.css";
+import "./globals.css";
 import localFont from "next/font/local";
 import { AppSidebar } from "@/components/dashboard/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar"; // Import SidebarProvider
