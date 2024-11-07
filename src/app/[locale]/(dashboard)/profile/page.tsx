@@ -125,7 +125,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="py-4 px-6 text-sm text-zinc-500 flex justify-between items-center">
-                            Please contact support if you don't have a customer id.
+                            Please contact support if you don&apos;t have a customer id.
                             <Button variant="outline">Save</Button>
                         </div>
                     </div>
