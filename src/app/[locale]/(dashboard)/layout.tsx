@@ -6,8 +6,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "./globals.css";
 import localFont from "next/font/local";
-import { AppSidebar } from "@/components/dashboard/app-sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar"; // Import SidebarProvider
 
 const geistSans = localFont({
     src: "../../fonts/GeistVF.woff",
@@ -34,10 +32,7 @@ export default async function DashboardLayout({
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Providers>
                     <NextIntlClientProvider messages={messages}>
-                        {/* <SidebarProvider>
-                            <AppSidebar /> */}
                         {children}
-                        {/* </SidebarProvider> */}
                     </NextIntlClientProvider>
                 </Providers>
             </body>

@@ -1,10 +1,8 @@
 "use client"
 
 import {
-  BadgeCheck,
   Bell,
   LogOut,
-  Sparkles,
 } from "lucide-react"
 
 import {
@@ -27,7 +25,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { CaretSortIcon, ComponentPlaceholderIcon } from "@radix-ui/react-icons"
+import { CaretSortIcon } from "@radix-ui/react-icons"
 
 export function NavUser({
   user,
@@ -81,23 +79,8 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <Sparkles />
-                Upgrade to Pro
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheck />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <ComponentPlaceholderIcon />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
                 <Bell />
-                Notifications
+                Home
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
