@@ -1,9 +1,9 @@
-// src/api/product.ts
+// src/api/products.ts
 import axios from 'axios';
 
-const API_URL = 'https://safetech-admin-18ab4fbef501.herokuapp.com/api/products';
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/products`;
 
 export const fetchProducts = async () => {
-    const response = await axios.get(`${API_URL}/products`);
+    const response = await axios.get(API_URL);
     return response.data;
 };

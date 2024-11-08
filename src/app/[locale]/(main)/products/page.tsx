@@ -1,92 +1,29 @@
-"use client";
+// src/app/[locale]/(main)/products/page.tsx
+import { fetchProducts } from '@/api/products';
+import { Product, ProductDescription, ProductDescriptionChild, ProductsResponse } from '@/types/product';
 
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useTranslations, useLocale } from 'next-intl';
-
-interface Product {
-    _id: string;
-    title: {
-        en: string;
-        ar: string;
-    };
-    slug: {
-        en: string;
-        ar: string;
-    };
-    availableQuantity: number;
-    description: {
-        en: string;
-        ar: string;
-    };
-    dimension?: string;
-    productPhotos: string[];
-    mainPhoto: string;
-    productVideo?: string;
-    keywords: {
-        en: string[];
-        ar: string[];
-    };
-    metaTitle?: {
-        en: string;
-        ar: string;
-    };
-    metaDescription?: {
-        en: string;
-        ar: string;
-    };
-    metaKeywords?: {
-        en: string[];
-        ar: string[];
-    };
-    faq?: {
-        question: {
-            en: string;
-            ar: string;
-        };
-        answer: {
-            en: string;
-            ar: string;
-        };
-    }[];
-    url?: string;
-    createdAt: Date;
-    updatedAt: Date;
-}
-
-export default function ProductList() {
-    const [products, setProducts] = useState<Product[]>([]);
-    const t = useTranslations('Product'); // Using translation function
-    const locale = useLocale() as 'en' | 'ar'; // Get the current locale
-
-    useEffect(() => {
-        axios.get('http://localhost:4000/api/products')
-            .then((res) => {
-                setProducts(res.data);
-                console.log(res.data);
-                console.log("fetched successfully");
-            })
-            .catch((error) => {
-                console.error('Error fetching products:', error);
-            });
-    }, []);
+const ProductsPage = async () => {
+    const products: ProductsResponse = await fetchProducts();
 
     return (
         <div>
-            <h1>{t('product_list')}</h1> {/* Using translation for title */}
-            {products.length === 0 ? (
-                <p>{t('no_products')}</p>
-            ) : (
-                <ul>
-                    {products.map((product) => (
-                        <li key={product._id}>
-                            <h2>{t('title')}: {product.title[locale]}</h2>
-                            <p>{t('description')}: {product.description[locale]}</p>
-                            <p>{t('quantity')}: {product.availableQuantity}</p>
-                        </li>
-                    ))}
-                </ul>
-            )}
+            <h1>Products</h1>
+            {products.data.map((product: Product) => (
+                <div key={product.id}>
+                    <h2>{product.name}</h2>
+                    <div>
+                        {/* Render description with safe rendering */}
+                        {product.description?.map((desc: ProductDescription, index: number) => (
+                            <p key={index}>
+                                {desc.children.map((child: ProductDescriptionChild) => child.text).join(' ')}
+                            </p>
+                        ))}
+                    </div>
+                    {/* Add other product details here */}
+                </div>
+            ))}
         </div>
     );
-}
+};
+
+export default ProductsPage;
