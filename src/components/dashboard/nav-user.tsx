@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import {
@@ -28,6 +29,8 @@ import {
 import { CaretSortIcon } from "@radix-ui/react-icons"
 import { useRouter } from "next/navigation"
 import { Skeleton } from "@/components/ui/skeleton"
+import Cookies from "js-cookie"
+import { useAuth } from "@/contexts/AuthContext"
 
 export function NavUser({
   user,
@@ -40,10 +43,13 @@ export function NavUser({
   }
   isLoading: boolean
 }) {
+  const { isAuthenticated, setIsAuthenticated } = useAuth()
   const { isMobile } = useSidebar()
   const router = useRouter();
 
   const handleLogout = () => {
+    setIsAuthenticated(false);
+    Cookies.remove('jwt')
     console.log('Logging out')
     router.push("/")
   }

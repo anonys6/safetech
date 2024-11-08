@@ -1,48 +1,117 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-
-import React from "react";
-import { Label } from "@/components/ui/label";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import {
     IconBrandGithub,
     IconBrandGoogle,
 } from "@tabler/icons-react";
+import axios from "axios";
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form";
 
-export default function SignupForm() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log("Form submitted");
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/local`;
+
+const loginSchema = z.object({
+    identifier: z.string().email({
+        message: "Invalid email address",
+    }),
+    password: z.string().min(1, { message: "Password is required" }),
+});
+
+type LoginSchema = z.infer<typeof loginSchema>;
+
+
+export default function LoginForm() {
+    const { isAuthenticated, setIsAuthenticated } = useAuth();
+    const router = useRouter();
+
+    const form = useForm<LoginSchema>({
+        resolver: zodResolver(loginSchema),
+    });
+
+    const onSubmit = async (data: LoginSchema) => {
+        console.log(data);
+        // Handle form submission
+
+        try {
+            const response = await axios.post(API_URL, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            console.log(data);
+
+            
+            const { jwt, user } = response.data;
+            Cookies.set("jwt", jwt, { expires: 7 });
+
+            setIsAuthenticated(true);
+
+            router.push("/en/profile");
+        } catch (error) {
+            console.error("Error during login", error);
+        }
     };
 
+
     return (
-        <div className="flex items-center justify-center md:h-[calc(100vh-64px)]">
-            <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black ">
-                <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-                    Welcome to SafeTech
-                </h2>
-                <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                    Login to SafeTech if you can because we don&apos;t have a login flow
-                    yet
-                </p>
+        <div className="flex flex-col px-5 flex-1 items-center py-12">
+            <div className='flex flex-col gap-6 p-8 bg-muted rounded-md'>
+                <h2 className='text-center text-3xl text-primary font-bold'>Login</h2>
 
-                <form className="my-8" onSubmit={handleSubmit}>
-                    <LabelInputContainer className="mb-4">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-                    </LabelInputContainer>
-                    <LabelInputContainer className="mb-4">
-                        <Label htmlFor="password">Password</Label>
-                        <Input id="password" placeholder="••••••••" type="password" />
-                    </LabelInputContainer>
+                <div className="px-5 w-[800px]">
+                    <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 
-                    <button
-                        className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-                        type="submit"
-                    >
-                        Sign in &rarr;
-                        <BottomGradient />
-                    </button>
+
+                            <FormField
+                                control={form.control}
+                                name="identifier"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Email</FormLabel>
+                                        <FormControl>
+                                            <Input placeholder="johndoe@example.com" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+
+                            <FormField
+                                control={form.control}
+                                name="password"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Password</FormLabel>
+                                        <FormControl>
+                                            <Input placeholder="••••••••" type="password" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+
+                            <Button type="submit">Login</Button>
+                        </form>
+                    </Form>
+
 
                     <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
@@ -68,7 +137,7 @@ export default function SignupForm() {
                             <BottomGradient />
                         </button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     );

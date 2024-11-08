@@ -12,6 +12,7 @@ import {
 import Link from 'next/link'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
+import Cookies from 'js-cookie'
 
 const NavbarAvatar = () => {
     const { isAuthenticated, setIsAuthenticated } = useAuth();
@@ -20,6 +21,7 @@ const NavbarAvatar = () => {
 
     const handleLogout = () => {
         setIsAuthenticated(false);
+        Cookies.remove('jwt');
         console.log('Logging out');
         router.push("/");
     }
