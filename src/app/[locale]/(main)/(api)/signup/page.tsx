@@ -78,7 +78,7 @@ export default function SignupForm() {
 
             setIsAuthenticated(true);
 
-            router.push("/en/profile");
+            router.push("/");
         } catch (error) {
             console.error("Error during signup", error);
         }

@@ -20,8 +20,8 @@ const NavbarAvatar = () => {
     const router = useRouter();
 
     const handleLogout = () => {
-        setIsAuthenticated(false);
         Cookies.remove('jwt');
+        setIsAuthenticated(false);
         console.log('Logging out');
         router.push("/");
     }
