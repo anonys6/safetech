@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "./globals.css";
 import localFont from "next/font/local";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
 const geistSans = localFont({
     src: "../../fonts/GeistVF.woff",
@@ -31,9 +32,12 @@ export default async function DashboardLayout({
         <html lang={locale}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Providers>
-                    <NextIntlClientProvider messages={messages}>
-                        {children}
-                    </NextIntlClientProvider>
+                    <ProtectedRoute>
+
+                        <NextIntlClientProvider messages={messages}>
+                            {children}
+                        </NextIntlClientProvider>
+                    </ProtectedRoute>
                 </Providers>
             </body>
         </html>
