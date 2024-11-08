@@ -86,11 +86,11 @@ export default function SignupForm() {
 
 
     return (
-        <div className="flex flex-col px-5 flex-1 items-center py-12">
-            <div className='flex flex-col gap-6 p-8 bg-muted rounded-md'>
+        <div className="flex justify-center py-12 px-4">
+            <div className='flex flex-col gap-6 py-12 w-[800px] bg-muted rounded-md '>
                 <h2 className='text-center text-3xl text-primary font-bold'>Signup Page</h2>
 
-                <div className="px-5 w-[800px]">
+                <div className="px-5 flex flex-col ">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                             <FormField
