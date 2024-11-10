@@ -18,6 +18,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import avatarImage from "@/assets/avatar.jpeg";
+import { useRouter } from "next/navigation"
 
 // This is sample data.
 const data = {
@@ -54,9 +55,11 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const router = useRouter();
+
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
+      <SidebarHeader onClick={() => router.push("/")}>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import AvatarImage from "@/assets/avatar.jpeg";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 
 export default function Page() {
     return (
@@ -178,12 +179,27 @@ export default function Page() {
                             style={{ backgroundColor: "rgb(42, 19, 20)" }}
                             className="py-4 px-6 text-sm text-zinc-500 flex justify-end items-center rounded-b-md"
                         >
-                            <Button
-                                className="bg-red-600 text-white hover:bg-red-500"
-                                variant="outline"
-                            >
-                                Delete Account
-                            </Button>
+                            <AlertDialog>
+                                <AlertDialogTrigger asChild>
+                                    <Button
+                                        variant="outline"
+                                        className="bg-red-600 text-white hover:bg-red-500"
+                                    >Delete Account</Button>
+                                </AlertDialogTrigger>
+                                <AlertDialogContent>
+                                    <AlertDialogHeader>
+                                        <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                                        <AlertDialogDescription>
+                                            This action cannot be undone. This will permanently delete your
+                                            account and remove your data from our servers.
+                                        </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <AlertDialogFooter>
+                                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                        <AlertDialogAction>Continue</AlertDialogAction>
+                                    </AlertDialogFooter>
+                                </AlertDialogContent>
+                            </AlertDialog>
                         </div>
                     </div>
                 </div>

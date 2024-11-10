@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import GetQuote from "@/components/layout/GetQuote";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -46,6 +47,7 @@ export default async function RootLayout({
                         {children}
                         <Footer />
                         <GetQuote />
+                        <Toaster />
                     </NextIntlClientProvider>
                 </Providers>
             </body>

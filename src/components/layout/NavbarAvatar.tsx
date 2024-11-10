@@ -13,13 +13,17 @@ import Link from 'next/link'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie'
+import { useToast } from '@/hooks/use-toast'
 
 const NavbarAvatar = () => {
     const { isAuthenticated, setIsAuthenticated } = useAuth();
-
     const router = useRouter();
+    const { toast } = useToast();
 
     const handleLogout = () => {
+        toast({
+            description: "You have been logged out",
+        })
         Cookies.remove('jwt');
         setIsAuthenticated(false);
         console.log('Logging out');
