@@ -43,7 +43,7 @@ const data = {
     },
     {
       name: "Order History",
-      url: "#",
+      url: "/en/profile/orders",
       icon: ShoppingCart
     },
     // {
