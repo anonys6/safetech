@@ -22,7 +22,7 @@ function ProductCard() {
 
     return (
         <div className='w-[350px] mx-auto '>
-            <div className='dark:bg-white bg-gray-100 rounded-md p-2'>
+            <div className='dark:bg-slate-800 bg-gray-100 rounded-md p-2'>
                 <div className='w-full h-72  relative'>
                     <motion.button
                         className='absolute top-2 right-2 z-20 text-2xl text-white'
@@ -66,11 +66,11 @@ function ProductCard() {
                 <article className='text-black pt-2 p-2'>
                     <div className='flex justify-between'>
                         <h1 className='font-semibold text-xl text-blue-500'>
-                            Nike Air Max
+                            AI Sensor Camera
                         </h1>
-                        <span className='font-medium text-xl text-blue-500'>$39</span>
+                        <span className='font-medium text-xl text-blue-500'>$6500</span>
                     </div>
-                    <p className='text-xs pb-2'>
+                    <p className='text-xs pb-2 text-white'>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
                         porro quos quae autem vel praesentium.
                     </p>

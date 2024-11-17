@@ -1,24 +1,43 @@
 // src/app/[locale]/(main)/products/page.tsx
 import { fetchProducts } from '@/api/products';
 import ProductCard from '@/components/layout/ProductCard';
+// import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { Product, ProductDescription, ProductDescriptionChild, ProductsResponse } from '@/types/product';
+import Link from 'next/link';
 
 const ProductsPage = async () => {
     const products: ProductsResponse = await fetchProducts();
 
     return (
-        <div className='flex justify-center py-16'>
-            <div className='w-[1200px] flex flex-col'>
+        <div className='px-8 w-full py-16'>
+            <div className='flex flex-col'>
+                {/* <Breadcrumb>
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink>
+                                <Link href="/">Home</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbLink>
+                                <Link href="/components">Products</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb> */}
 
-                <h1>Products</h1>
-                <div className='grid grid-cols-3 gap-4'>
-
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                {/* <h1>Products</h1> */}
+                <div className='grid grid-cols-12 gap-4'>
+                    <div className='col-span-2'>Filter</div>
+                    <div className='grid grid-cols-3 gap-4 col-span-10'>
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                    </div>
                 </div>
             </div>
         </div>

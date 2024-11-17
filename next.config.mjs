@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['picsum.photos', "avatar.vercel.sh", "images.unsplash.com"],
+        domains: ['picsum.photos', "avatar.vercel.sh", "images.unsplash.com", "safetechco.com"],
     },
 };
 

@@ -1,22 +1,22 @@
 export const CardArr = [
     {
-        img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop',
-        title: 'Nike Air1',
+        img: 'https://safetechco.com/wp-content/uploads/2024/02/monitor-1.jpg',
+        title: 'AI Sensor Camera',
         color: '#202020',
     },
     {
-        img: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?q=80&w=800&auto=format&fit=crop',
-        title: 'Nike Air2',
+        img: 'https://safetechco.com/wp-content/uploads/2024/02/camera-1.jpg',
+        title: 'AI Monitor',
         color: '#23acfc',
     },
     {
-        img: 'https://images.unsplash.com/photo-1520256862855-398228c41684?q=80&w=800&auto=format&fit=crop',
-        title: 'Adidas',
+        img: 'https://safetechco.com/wp-content/uploads/2024/02/cable.webp',
+        title: '4 Pin Cable',
         color: '#a3fcff',
     },
     {
-        img: 'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?q=80&w=800&auto=format&fit=crop',
-        title: 'Brown Leather ',
+        img: 'https://safetechco.com/wp-content/uploads/2024/02/speaker.jpg',
+        title: 'External Speaker',
         color: '#A4636C',
     },
 ];
