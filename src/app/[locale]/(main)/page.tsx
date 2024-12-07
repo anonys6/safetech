@@ -10,6 +10,8 @@ import Image from 'next/image';
 import LogoMarquee from "@/components/layout/LogoMarquee";
 import { BentoDemo } from "@/components/layout/ProductBento";
 import ProductSupport from "@/components/layout/ProductSupport";
+import OurTeam from "@/components/layout/OurTeam";
+import ProgressiveCarousel from "@/components/layout/ProgressiveCarousel";
 
 
 export default function Home() {
@@ -41,7 +43,16 @@ export default function Home() {
 
             <ProductSupport />
 
+            <OurTeam />
             {/* <Testimonials /> */}
+
+            <div className="w-full flex justify-center">
+                <div className="w-[1200px]">
+                <ProgressiveCarousel />
+                </div>
+            </div>
+
+            
 
             <div className="flex flex-col gap-16 lg:flex-row justify-center px-5 sm:px-8 md:px-16 py-16 bg-background ">
                 <FAQ />
