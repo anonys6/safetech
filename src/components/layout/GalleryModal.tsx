@@ -5,7 +5,13 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { items } from '@/components/website/constant';
+
+const items = Array.from({ length: 12 }, (_, i) => ({
+    id: `image-${i}`,
+    url: `https://picsum.photos/400/600?random=${i}`,
+    title: `Image ${i + 1}`,
+    description: `Description for image ${i + 1}`
+}));
 
 function Gallery({ items, setIndex, setOpen, index }) {
     return (
@@ -18,8 +24,8 @@ function Gallery({ items, setIndex, setOpen, index }) {
                             className={`rounded-2xl ${index === i
                                 ? 'w-[250px] '
                                 : 'xl:w-[50px] md:w-[30px] sm:w-[20px] w-[14px]'
-                                } h-[200px] flex-shrink-0  object-cover transition-[width] ease-in-out duration-300`}
-                            key={item}
+                                } h-[300px] flex-shrink-0  object-cover transition-[width] ease-in-out duration-300`}
+                            key={item.id}
                             onMouseEnter={() => {
                                 setIndex(i);
                             }}
@@ -30,7 +36,7 @@ function Gallery({ items, setIndex, setOpen, index }) {
                                 setIndex(i);
                                 setOpen(true);
                             }}
-                            src={item?.url}
+                            src={item.url}
                             layoutId={item.id}
                         />
                     </>
@@ -40,7 +46,7 @@ function Gallery({ items, setIndex, setOpen, index }) {
     );
 }
 
-export default function index() {
+export default function GalleryModal() {
     const [index, setIndex] = useState(5);
     const [open, setOpen] = useState(false);
     useEffect(() => {

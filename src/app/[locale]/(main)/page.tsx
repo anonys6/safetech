@@ -12,6 +12,7 @@ import { BentoDemo } from "@/components/layout/ProductBento";
 import ProductSupport from "@/components/layout/ProductSupport";
 import OurTeam from "@/components/layout/OurTeam";
 import ProgressiveCarousel from "@/components/layout/ProgressiveCarousel";
+import GalleryModal from "@/components/layout/GalleryModal";
 
 
 export default function Home() {
@@ -48,11 +49,22 @@ export default function Home() {
 
             <div className="w-full flex justify-center">
                 <div className="w-[1200px]">
-                <ProgressiveCarousel />
+                    <ProgressiveCarousel />
                 </div>
             </div>
 
-            
+            <div className='flex w-full py-16 justify-center'>
+                <div className='flex w-[1200px] flex-col gap-4 items-center px-4 lg:px-20 text-center leading-snug'>
+                    <h2 className='text-[48px]'>Product Fancy Gallery</h2>
+                    <p className='text-gray-500 dark:text-gray-400 font-light text-lg'>From one-to-one interactions to unlimited scalability in a single SDK. No need to set up, babysit, and burn dollars with multiple SDKs.</p>
+
+                    <div className='flex items-center'>
+                        <GalleryModal />
+                    </div>
+                </div>
+
+            </div>
+
 
             <div className="flex flex-col gap-16 lg:flex-row justify-center px-5 sm:px-8 md:px-16 py-16 bg-background ">
                 <FAQ />
