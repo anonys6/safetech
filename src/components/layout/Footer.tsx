@@ -32,7 +32,7 @@ function Footer() {
     const t = useTranslations("Footer");
 
     return (
-        <footer className="flex pt-16 flex-col bg-[var(--bg-footer)] gap-4 text-whtie dark:text-white">
+        <footer className="flex pt-16 flex-col bg-[var(--bg-footer)] gap-4 text-white">
             <div className="items-start gap-4 2sm:gap-8 px-4 2sm:px-8 grid grid-cols-2  lg:grid-cols-9">
                 <div className="flex flex-col gap-4 col-span-2 2sm:col-span-1 lg:col-span-3">
                     <Image

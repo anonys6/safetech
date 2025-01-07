@@ -95,7 +95,7 @@ const Carousel: React.FC<CarouselProps> = ({
         plugins.push(
             Autoplay({
                 playOnInit: true,
-                delay: 3000,
+                delay: 10000,
                 stopOnMouseEnter: true,
                 jump: false,
                 stopOnInteraction: false,
