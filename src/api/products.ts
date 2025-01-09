@@ -7,3 +7,8 @@ export const fetchProducts = async () => {
     const response = await axios.get(API_URL);
     return response.data;
 };
+
+export const fetchSingleProduct = async (id: string) => {
+    const response = await axios.get(`${API_URL}/${id}`);
+    return response.data;
+}
