@@ -1,5 +1,6 @@
 import React from 'react'
 import { fetchSingleProduct } from '@/api/products';
+import BreadcrumbNav from '@/components/layout/BreadcrumbNav';
 
 const ProductPage = async ({ params }: { params: { id: string } }) => {
     const product = await fetchSingleProduct(params.id);
@@ -8,7 +9,10 @@ const ProductPage = async ({ params }: { params: { id: string } }) => {
     }
 
     return (
-        <div>{product.data.title}</div>
+        <div>
+            <BreadcrumbNav />
+            {product.data.title}
+        </div>
     )
 }
 

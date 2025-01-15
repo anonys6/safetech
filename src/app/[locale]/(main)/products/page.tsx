@@ -1,8 +1,7 @@
 // src/app/[locale]/(main)/products/page.tsx
 import { fetchProducts } from '@/api/products';
-import ProductCard from '@/components/layout/ProductCard';
-// import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
-import { Product, ProductDescription, ProductDescriptionChild, ProductsResponse } from '@/types/product';
+import BreadcrumbNav from '@/components/layout/BreadcrumbNav';
+import { ProductsResponse } from '@/types/product';
 import Link from 'next/link';
 
 const ProductsPage = async () => {
@@ -10,21 +9,29 @@ const ProductsPage = async () => {
 
     return (
         <>
+            <BreadcrumbNav />
+
             <div
-                className='grid grid-cols-12 gap-4'
+                className='grid grid-cols-5 gap-4 px-4 py-20'
             >
-                {
-                    products.data.map((product, i) => (
-                        <Link
-                            href={`/en/products/${product.documentId}`}
-                            key={i}
-                            className='p-4 border border-gray-200 rounded-md'
-                        >
-                            <h1>{product.id}</h1>
-                            <h2>{product.title}</h2>
-                        </Link>
-                    ))
-                }
+                <div className='col-span-1'>
+                    <h1>Filter</h1>
+                </div>
+
+                <div className='col-span-4 grid grid-cols-4 gap-3'>
+                    {
+                        products.data.map((product, i) => (
+                            <Link
+                                href={`/en/products/${product.documentId}`}
+                                key={i}
+                                className='p-4 border border-border border-gray-200 rounded-md'
+                            >
+                                <h1>{product.id}</h1>
+                                <h2>{product.title}</h2>
+                            </Link>
+                        ))
+                    }
+                </div>
             </div>
         </>
     );

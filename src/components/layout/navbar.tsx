@@ -37,7 +37,7 @@ export const DefaultNavbar = ({ mainNav }: DefaultNavbarProps) => {
 
     return (
         <header>
-            <nav className={styles.container}>
+            <nav className="border-b border-border flex items-center justify-center h-16">
                 <div className={styles.wrapper}>
                     <Link href="/">
                         <Image src={logo} alt="BI" width={100} height={20} />

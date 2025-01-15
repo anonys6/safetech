@@ -102,7 +102,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="border-t flex justify-center py-5">
+            <div className="border-t border-border flex justify-center py-5">
                 <p>{t("copyright")}</p>
             </div>
         </footer>
