@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SafeTech Solutions - Safety Equipment & Monitoring Systems
 
-## Getting Started
+![SafeTech Banner](src/assets/SafeTech-Logo.svg)
 
-First, run the development server:
+Live Demo: [SafeTech Website](https://safetech-zeta.vercel.app/)
 
+## Overview
+
+SafeTech Solutions is a comprehensive web platform showcasing industrial safety equipment and monitoring systems. The project demonstrates modern web development practices using Next.js 14, offering a responsive, multilingual interface with seamless navigation and dynamic content management.
+
+## Key Features
+
+- **Multilingual Support**: Full Arabic and English language support
+- **Dynamic Product Catalog**: Showcase of safety equipment including PWAS, LMI systems
+- **Interactive UI Components**: Using shadcn/ui for consistent design
+- **Responsive Design**: Mobile-first approach ensuring compatibility across devices
+- **Performance Optimized**: Built with Next.js 14 for optimal loading speeds
+- **Content Management**: Powered by Strapi headless CMS [Backend Repository](https://github.com/anonys6/strapi-safetech)
+
+## Tech Stack
+
+### Frontend
+- Next.js 14 (React Framework)
+- TypeScript
+- Tailwind CSS
+- Radix UI Components
+- Framer Motion for animations
+- next-intl for internationalization
+
+### Backend
+- Strapi Headless CMS
+- PostgreSQL Database
+- Cloudinary for media management
+
+## Running Locally
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/anonys6/safetech.git
+cd safetech
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+pnpm dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+safetech/
+├── src/
+│   ├── app/          # Next.js app router components
+│   ├── components/   # Reusable UI components
+│   ├── styles/       # CSS modules and global styles
+│   ├── lib/         # Utility functions and helpers
+│   └── i18n/        # Internationalization setup
+├── public/          # Static assets
+└── messages/        # Translation files
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The project is deployed on Vercel with automatic deployments from the main branch. The backend Strapi CMS is hosted separately with its own deployment pipeline.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Backend Repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Strapi backend code is maintained in a separate repository:
+[SafeTech Strapi Backend](https://github.com/anonys6/strapi-safetech)
+
+## Contact
+
+For any queries or support, please contact [info@safetechco.com](mailto:info@safetechco.com)
