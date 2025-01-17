@@ -4,18 +4,6 @@
 
 Live Demo: [SafeTech Website](https://safetech-zeta.vercel.app/)
 
-
----
-
-## ⚠️ Disclaimer
-
-This project is for **demonstration purposes only**.  
-**All rights are reserved**. Redistribution, modification, or reuse of the code without explicit permission is strictly prohibited.  
-
-If you wish to discuss the project or request permission, please contact me at [info@safetechco.com](mailto:info@safetechco.com).
-
----
-
 ## Overview
 
 SafeTech Solutions is a comprehensive web platform showcasing industrial safety equipment and monitoring systems. The project demonstrates modern web development practices using Next.js 14, offering a responsive, multilingual interface with seamless navigation and dynamic content management.
@@ -92,6 +80,13 @@ The project is deployed on Vercel with automatic deployments from the main branc
 The Strapi backend code is maintained in a separate repository:
 [SafeTech Strapi Backend](https://github.com/anonys6/strapi-safetech)
 
-## Contact
+---
 
-For any queries or support, please contact [info@safetechco.com](mailto:info@safetechco.com)
+## ⚠️ Disclaimer
+
+This project is for **demonstration purposes only**.  
+**All rights are reserved**. Redistribution, modification, or reuse of the code without explicit permission is strictly prohibited.  
+
+If you wish to discuss the project or request permission, please contact me at [info@safetechco.com](mailto:info@safetechco.com).
+
+---
