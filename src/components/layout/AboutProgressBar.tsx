@@ -28,6 +28,7 @@ function AboutProgressBar({ title }: { title: string }) {
                         alt='worker'
                         height={560}
                         width={560}
+                        placeholder='empty'
                     />
                 </div>
 

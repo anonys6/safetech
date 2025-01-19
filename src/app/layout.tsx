@@ -3,7 +3,6 @@
 // import GetQuote from "@/components/layout/GetQuote";
 // import { DefaultNavbar } from "@/components/layout/navbar";
 // import { navbarConfig } from "@/config/navbarConfig";
-import React from "react";
 // import { Providers } from "./providers";
 // import type { Metadata } from "next";
 // import localFont from "next/font/local";
@@ -52,10 +51,16 @@ import React from "react";
 // }
 
 
+import React from "react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
