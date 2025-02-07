@@ -36,7 +36,7 @@ const items = [
 ];
 export default function ProgressiveCarousel() {
     return (
-        <>
+        <div className='py-32'>
             <ProgressSlider vertical={false} activeSlider='bridge'>
                 <SliderContent>
                     {items.map((item, index) => (
@@ -70,6 +70,6 @@ export default function ProgressiveCarousel() {
                     ))}
                 </SliderBtnGroup>
             </ProgressSlider>
-        </>
+        </div>
     );
 }
