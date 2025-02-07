@@ -157,21 +157,32 @@ export function FAQ() {
 
     return (
         <div className="px-5 flex-1 flex flex-col gap-4 font-bold">
-            <h2 className="text-3xl ">{t("heading")}</h2>
-
+            <h2 className="text-3xl">{t("heading")}</h2>
 
             <Accordion type="single" collapsible className="w-full">
-                {faqArray.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="hover:no-underline py-2 text-medium text-left">{t(`faq${index + 1}_title`)}</AccordionTrigger>
-                        <AccordionContent>
-                            <div dangerouslySetInnerHTML={{ __html: t(`faq${index + 1}_content`) }} />
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
+                {faqArray.map((_, index) => {
+                    // Get the translation key for title and content
+                    const titleKey = `faq${index + 1}_title`;
+                    const contentKey = `faq${index + 1}_content`;
+
+                    return (
+                        <AccordionItem key={index} value={`item-${index}`}>
+                            <AccordionTrigger className="hover:no-underline py-2 text-medium text-left">
+                                {t(titleKey)}
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: t.raw(contentKey)
+                                    }}
+                                />
+                            </AccordionContent>
+                        </AccordionItem>
+                    );
+                })}
             </Accordion>
         </div>
-    )
+    );
 }
 
 export default FAQ;
